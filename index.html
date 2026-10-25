@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mirinu</title>
+  <meta name="description" content="Mirinu, l'app pour suivre tes séries, films, animés, mangas et romans. Bientôt sur Android.">
+  <meta name="theme-color" content="#0B0E13">
+  <style>
+    :root {
+      --bg: #0B0E13;
+      --card: #151A22;
+      --text: #F5F7FA;
+      --muted: #8A93A6;
+      --violet: #937BF4;
+      --violet-fill: #6C4CF0;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    main { max-width: 34rem; width: 100%; }
+    .marque {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em;
+    }
+    h1 {
+      margin-top: 40px;
+      font-size: clamp(2rem, 7vw, 3rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    p { margin-top: 20px; color: var(--muted); font-size: 1.05rem; line-height: 1.6; }
+    ul {
+      list-style: none; padding: 0; margin-top: 28px;
+      display: grid; gap: 10px;
+    }
+    li {
+      background: var(--card); border-radius: 12px; padding: 14px 16px;
+      color: var(--text); font-size: 0.98rem;
+    }
+    .etat {
+      margin-top: 32px; display: inline-block;
+      border: 1px solid var(--violet); color: var(--violet);
+      border-radius: 999px; padding: 6px 14px; font-size: 0.9rem;
+    }
+    footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+    a { color: var(--violet); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="marque">Mirinu</div>
+    <h1>Tout ce que tu regardes et lis, au même endroit.</h1>
+    <p>Séries, films, animés, mangas et romans : les épisodes vus, ce qui sort cette semaine, ton année en chiffres. Sans compte, tes données restent sur ton téléphone.</p>
+    <ul>
+      <li>Reprend ton historique TV Time, Trakt, MyAnimeList, Letterboxd ou Netflix</li>
+      <li>Calendrier des sorties et rappels quand un épisode arrive</li>
+      <li>En français, anglais, allemand, italien et espagnol</li>
+    </ul>
+    <div class="etat">Bientôt sur Android</div>
+    <footer>
+      Fait en Suisse. Une question : <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>
+    </footer>
+  </main>
+</body>
+</html>
