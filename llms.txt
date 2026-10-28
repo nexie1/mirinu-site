@@ -1,0 +1,33 @@
+# Mirinu
+
+> Mirinu est une app gratuite pour suivre séries, films, animés, mangas et romans, sur le web (https://app.mirinu.ch/) et bientôt sur Android. Elle marche sans compte : la bibliothèque reste sur l'appareil de la personne. Projet personnel de Marco, fait en Suisse.
+
+## Ce que fait l'app
+
+- Liste « À voir » : pour chaque série, le prochain épisode et le nombre d'épisodes restants ; pour un manga ou un roman, le prochain chapitre.
+- Fiche d'un titre : progression, saisons et épisodes, note sur dix, note personnelle, estimation du jour où l'on aura rattrapé la diffusion à son rythme.
+- Onglet « À venir » : prochains épisodes et chapitres par date, en liste ou en calendrier. La date du prochain chapitre d'un manga est une estimation, signalée comme telle.
+- Sur Android : notification à la sortie d'un épisode, avec un bouton pour le marquer vu, et un widget d'écran d'accueil avec les trois prochains épisodes à regarder.
+- Bibliothèque : filtres par type et par statut (en cours, terminé, abandonné, prévu), tri par dernière activité, titre, note ou date d'ajout, listes personnelles.
+- « Mon année » : temps regardé, épisodes, films et chapitres de l'année, mois par mois, records, image à partager. Le profil garde les totaux, les genres et une carte d'activité.
+- Import d'historique depuis le fichier d'export de TV Time, Trakt, MyAnimeList, Letterboxd ou Netflix. Le fichier reste sur l'appareil ; rien n'est écrit avant confirmation.
+- Langues : français, anglais, allemand, italien et espagnol.
+
+## Données et vie privée
+
+- Pas de compte, pas d'adresse mail demandée. Un compte facultatif est prévu plus tard.
+- Pas de publicité, pas de traqueur, pas de mesure d'audience, ni dans l'app ni sur mirinu.ch.
+- Synchronisation facultative entre appareils, reliés par un code ou un QR code valable deux minutes. Les données sont chiffrées sur l'appareil (AES-256-GCM) avant d'être envoyées ; le relais ne peut pas les lire et efface ce qui ne sert plus depuis 180 jours.
+- Les métadonnées (affiches, résumés, dates) viennent de TMDB, MangaUpdates et MangaDex, qui ne reçoivent que le titre recherché.
+
+## Prix
+
+Gratuit, sans publicité ni achat dans l'app. Des dons facultatifs pourraient être ouverts plus tard.
+
+## Liens
+
+- App web : https://app.mirinu.ch/
+- Page d'accueil : https://mirinu.ch/
+- Contact : contact@mirinu.ch
+
+Mirinu uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
