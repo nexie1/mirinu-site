@@ -134,6 +134,9 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
 .tmdb img{width:120px;height:auto}
 .tmdb a{min-height:44px}
 .pied .vo{color:var(--gris);margin-top:10px}
+.pied .liens{display:flex;flex-wrap:wrap;gap:0 20px}
+.pied .liens a{color:var(--gris)}
+.pied .liens a:hover{color:var(--texte)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -370,6 +373,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
     <div>
       <p>Mirinu, fait en Suisse.</p>
       <p><a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a></p>
+      <p class="liens"><a href="/confidentialite/">Confidentialité</a> <a href="/conditions/">Conditions</a> <a href="/supprimer/">Supprimer tes données</a></p>
     </div>
     <div>
       <div class="tmdb">

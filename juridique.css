@@ -1,0 +1,58 @@
+/* Pages Confidentialité, Conditions et Supprimer tes données.
+   Mêmes jetons, polices et en-tête que index.html ; texte sur une colonne
+   de lecture, rubriques sur deux colonnes à partir de 960 px. */
+@font-face{font-family:"Inter";src:url(/fonts/inter-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Inter";src:url(/fonts/inter-600.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(/fonts/bricolage-700.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+:root{
+  --nuit:#0B0E13;--ardoise:#151A22;--carte:#1B212B;--trait:#262D39;
+  --texte:#F5F7FA;--texte-2:#C4CAD5;--gris:#8A93A6;
+  --violet:#937BF4;--violet-fond:#6C4CF0;--violet-survol:#5836E2;
+  --titre:"Bricolage Grotesque",Inter,system-ui,sans-serif;
+  --corps:Inter,"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --gouttiere:clamp(16px,4vw,32px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--nuit);color:var(--texte-2);font-family:var(--corps);font-size:1rem;line-height:1.6;overflow-x:hidden}
+a{color:var(--violet);text-underline-offset:.18em;text-decoration-thickness:1px;overflow-wrap:anywhere}
+a:hover{color:#B3A2F8}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
+h1,h2{font-family:var(--titre);font-weight:700;color:var(--texte);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.125rem,1.6rem + 2vw,3.25rem);line-height:1.05}
+h2{font-size:1.25rem;line-height:1.25;letter-spacing:-.01em}
+p,ol{margin:0}
+p+p{margin-top:.75em}
+strong{color:var(--texte);font-weight:600}
+.page{max-width:1200px;margin-inline:auto;padding-inline:var(--gouttiere)}
+.saut{position:absolute;left:var(--gouttiere);top:-100px;background:var(--violet-fond);color:#fff;padding:12px 16px;border-radius:8px;z-index:10}
+.saut:focus{top:12px}
+
+/* En-tête (comme index.html) */
+.haut{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px}
+.marque{display:flex;align-items:center;gap:10px;color:var(--texte);text-decoration:none;font-family:var(--titre);font-weight:700;font-size:1.5rem;letter-spacing:-.01em;min-height:44px}
+.marque img{width:36px;height:36px;border-radius:9px}
+.marque:hover{color:var(--texte)}
+.bouton-discret{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid var(--trait);border-radius:999px;color:var(--texte);font-weight:600;font-size:.9375rem;text-decoration:none;transition:border-color .15s ease}
+.bouton-discret:hover{border-color:var(--violet);color:var(--texte)}
+
+/* Texte */
+.entete{padding-block:clamp(12px,2vw,24px) 0;max-width:42rem}
+.date{margin-top:10px;color:var(--gris);font-size:.875rem}
+.chapeau{margin-top:20px;color:var(--texte-2)}
+.rubriques{margin-top:clamp(28px,4vw,40px);display:grid;gap:28px 64px;align-items:start}
+@media (min-width:960px){.rubriques{grid-template-columns:1fr 1fr}}
+.rubriques section{border-top:1px solid var(--trait);padding-top:18px;max-width:40rem}
+.rubriques h2+p,.rubriques h2+ol{margin-top:10px}
+.etapes{padding-left:1.25em}
+.etapes li+li{margin-top:.6em}
+.etapes li::marker{color:var(--gris)}
+.etapes+p{margin-top:.75em}
+
+/* Pied de page */
+.pied{margin-top:clamp(40px,5vw,56px);border-top:1px solid var(--trait);padding-block:12px 24px;color:var(--gris);font-size:.875rem;line-height:1.6}
+.pied ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 24px}
+.pied a{display:inline-flex;align-items:center;min-height:44px}
+.pied a[aria-current="page"]{color:var(--texte);text-decoration:none}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
