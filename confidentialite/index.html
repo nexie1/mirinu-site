@@ -22,7 +22,7 @@
     <a class="bouton-discret" href="https://app.mirinu.ch/">Ouvrir l'app</a>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Confidentialité</h1>
       <p class="date">Mise à jour le 28 octobre 2026.</p>
@@ -32,7 +32,7 @@
     <div class="rubriques">
       <section aria-labelledby="appareil">
         <h2 id="appareil">Sur ton appareil</h2>
-        <p>Mirinu n'a pas de compte et ne te demande ni nom ni adresse mail. Ta bibliothèque, tes notes et tes réglages restent sur ton appareil&nbsp;: dans l'app sur Android, dans le stockage du navigateur sur app.mirinu.ch, sans cookie. Un fichier que tu importes est lu sur place et n'est envoyé nulle part.</p>
+        <p>Le compte est facultatif. Sans compte, Mirinu ne te demande ni nom ni adresse mail. Ta bibliothèque, tes notes et tes réglages restent sur ton appareil&nbsp;: dans l'app sur Android, dans le stockage du navigateur sur app.mirinu.ch, sans cookie. Un fichier que tu importes est lu sur place et n'est envoyé nulle part.</p>
         <p>Sur Android, si la sauvegarde Google de ton téléphone est active, elle peut copier ta bibliothèque, comme pour tes autres apps.</p>
         <p>Pas de publicité, pas de traqueur, pas de mesure d'audience.</p>
       </section>
@@ -47,6 +47,15 @@
         <h2 id="synchro">Synchronisation et sécurité</h2>
         <p>Si tu relies plusieurs appareils, ta bibliothèque est chiffrée sur ton appareil avant d'être envoyée au relais. Le relais ne garde que des données qu'il ne peut pas lire, et la clé n'y passe jamais en clair.</p>
         <p>Si tu trouves une faille, écris à <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> avant de la rendre publique.</p>
+      </section>
+
+      <section aria-labelledby="compte">
+        <h2 id="compte">Avec un compte</h2>
+        <p>Le compte est réservé aux personnes de 15&nbsp;ans ou plus. Il sert à retrouver ta bibliothèque si tu perds ton appareil et à gérer tes appareils depuis n'importe quel navigateur. Comme la synchro, il sert le service que tu demandes.</p>
+        <p>Le relais garde ton adresse mail, chiffrée&nbsp;; si tu te connectes avec Google, un identifiant illisible de ton compte Google et son adresse, chiffrée. Il garde aussi la liste de tes appareils (type et dates, au jour près) et ta bibliothèque chiffrée, qu'il ne peut pas lire. Ton code de secours ne quitte pas tes appareils.</p>
+        <p>Les codes de connexion et les avis de sécurité partent de <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>, par Infomaniak (Suisse). Mirinu ne t'écrit jamais pour de la publicité. Si tu te connectes avec Google, Google sait que tu utilises Mirinu&nbsp;; Google adhère au Data Privacy Framework.</p>
+        <p>Avant l'envoi d'un code par mail, un contrôle anti-robots de Cloudflare (Turnstile) lit ton adresse IP et des informations sur ton navigateur. Pour freiner les abus, le relais compte aussi les demandes par adresse IP, sous une forme illisible effacée après 2&nbsp;jours. Ces protections reposent sur l'intérêt légitime à protéger le service.</p>
+        <p>Un code de connexion vaut 10&nbsp;minutes. Les données du compte restent tant qu'il existe. Tu peux le supprimer quand tu veux&nbsp;: il est effacé 7&nbsp;jours après ta demande, puis disparaît des copies de secours du relais en 7&nbsp;jours de plus. Un compte inactif pendant 24&nbsp;mois est effacé, après un mail d'avertissement.</p>
       </section>
 
       <section aria-labelledby="prestataires">
