@@ -187,7 +187,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
         {
           "@type": "Question",
           "name": "Est-ce que je peux reprendre mon historique TV Time ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui. Demande ton export dans les réglages de ton compte sur tvtime.com, puis choisis le fichier dans Mirinu, sous « Importer un historique ». Mirinu reprend les épisodes vus, les revisionnages, les films et le statut de chaque série. Les exports de Trakt, MyAnimeList, Letterboxd et Netflix se reprennent de la même façon." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui. Demande l'export de tes données à TV Time, puis choisis le fichier dans Mirinu, sous « Importer un historique ». Mirinu reprend les épisodes vus, les revisionnages, les films et le statut de chaque série. Les exports de Trakt, MyAnimeList, Letterboxd et Netflix se reprennent de la même façon." }
         },
         {
           "@type": "Question",
@@ -231,7 +231,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
           <source media="(max-width: 719px)" type="image/avif" srcset="/img/telephone-avoir-390.avif 390w, /img/telephone-avoir-780.avif 780w" sizes="320px" width="780" height="1440">
           <source media="(max-width: 719px)" type="image/webp" srcset="/img/telephone-avoir-390.webp 390w, /img/telephone-avoir-780.webp 780w" sizes="320px" width="780" height="1440">
           <source type="image/avif" srcset="/img/accueil-ordinateur-1200.avif 1200w, /img/accueil-ordinateur-1800.avif 1800w, /img/accueil-ordinateur-2400.avif 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800">
-          <img src="/img/accueil-ordinateur-1200.webp" srcset="/img/accueil-ordinateur-1200.webp 1200w, /img/accueil-ordinateur-1800.webp 1800w, /img/accueil-ordinateur-2400.webp 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800" fetchpriority="high" alt="L'accueil de Mirinu : en haut, le prochain épisode de Slow Horses avec les boutons Marquer vu et Ouvrir la fiche ; dessous, la liste À voir avec Silo, The Bear et Frieren, et à droite les sorties à venir.">
+          <img src="/img/accueil-ordinateur-1200.webp" srcset="/img/accueil-ordinateur-1200.webp 1200w, /img/accueil-ordinateur-1800.webp 1800w, /img/accueil-ordinateur-2400.webp 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800" fetchpriority="high" alt="L'accueil de Mirinu : le prochain épisode de chaque série avec un rond pour le cocher. Sur ordinateur, Slow Horses en grand avec les boutons Marquer vu et Ouvrir la fiche, la liste À voir dessous et, à droite, les sorties à venir avec le lien Calendrier.">
         </picture>
       </figure>
     </section>
@@ -245,7 +245,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       <div class="paire">
         <picture class="doublon">
           <source type="image/avif" srcset="/img/telephone-avoir-390.avif 390w, /img/telephone-avoir-780.avif 780w" sizes="(min-width: 960px) 300px, 45vw">
-          <img class="ecran ecran-tel" src="/img/telephone-avoir-390.webp" srcset="/img/telephone-avoir-390.webp 390w, /img/telephone-avoir-780.webp 780w" sizes="(min-width: 960px) 300px, 45vw" width="780" height="1440" loading="lazy" decoding="async" alt="La liste À voir sur téléphone : Slow Horses saison 4 épisode 3, Silo saison 2 épisode 7 avec 13 épisodes de retard, The Bear, Frieren et Spy x Family, chacun avec un rond à cocher.">
+          <img class="ecran ecran-tel" src="/img/telephone-avoir-390.webp" srcset="/img/telephone-avoir-390.webp 390w, /img/telephone-avoir-780.webp 780w" sizes="(min-width: 960px) 300px, 45vw" width="780" height="1440" loading="lazy" decoding="async" alt="La liste À voir sur téléphone : Slow Horses saison 4 épisode 3, One Piece chapitre 1101 avec 95 chapitres de retard, Silo, Berserk et The Bear, chacun avec un rond à cocher.">
         </picture>
         <picture>
           <source type="image/avif" srcset="/img/telephone-fiche-390.avif 390w, /img/telephone-fiche-780.avif 780w" sizes="(min-width: 960px) 300px, (min-width: 720px) 45vw, 300px">
@@ -261,7 +261,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
         <p>Pour les mangas, la date du prochain chapitre est une estimation, et Mirinu l'écrit. Sur Android, une notification te prévient quand un épisode sort, avec un bouton pour le marquer vu, et un widget d'écran d'accueil montre les trois prochains épisodes à regarder.</p>
       </div>
       <div>
-        <h2 id="import">Ton historique, repris.</h2>
+        <h2 id="import">Reprends ton historique TV&nbsp;Time ou Trakt.</h2>
         <p>Si tu viens d'une autre app, Mirinu lit le fichier d'export que tu lui donnes et reconnaît tout seul d'où il vient. Il te montre ce qui va changer, et rien n'est écrit avant que tu confirmes. Le fichier reste sur ton appareil.</p>
         <p class="sources">TV Time, Trakt, MyAnimeList, Letterboxd, Netflix.</p>
       </div>
@@ -269,7 +269,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
 
     <section class="bloc" aria-labelledby="bibliotheque">
       <div class="texte">
-        <h2 id="bibliotheque">Ta bibliothèque, filtrée d'un clic.</h2>
+        <h2 id="bibliotheque">Trie et filtre toute ta bibliothèque.</h2>
         <p>Filtre par type et par statut, avec le nombre de titres de chacun. Trie par dernière activité, par titre, par note ou par date d'ajout. Sur ordinateur, les filtres restent ouverts à gauche et tes listes personnelles dans la barre latérale.</p>
       </div>
       <div class="large">
@@ -277,8 +277,8 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
           <picture>
             <source media="(max-width: 719px)" type="image/avif" srcset="/img/telephone-bibliotheque-390.avif 390w, /img/telephone-bibliotheque-780.avif 780w" sizes="300px" width="780" height="1160">
             <source media="(max-width: 719px)" type="image/webp" srcset="/img/telephone-bibliotheque-390.webp 390w, /img/telephone-bibliotheque-780.webp 780w" sizes="300px" width="780" height="1160">
-            <source type="image/avif" srcset="/img/bibliotheque-1000.avif 1000w, /img/bibliotheque-1600.avif 1600w, /img/bibliotheque-2066.avif 2066w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2066" height="1472">
-            <img class="ecran" src="/img/bibliotheque-1000.webp" srcset="/img/bibliotheque-1000.webp 1000w, /img/bibliotheque-1600.webp 1600w, /img/bibliotheque-2066.webp 2066w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2066" height="1472" loading="lazy" decoding="async" alt="La bibliothèque filtrée sur les séries : à gauche les filtres par type et par statut avec leurs nombres, à droite les affiches de Silo, The Office, Severance, The Bear, Slow Horses, Ted Lasso, Andor, Lupin, Fallout et Shōgun, avec la progression sous chacune.">
+            <source type="image/avif" srcset="/img/bibliotheque-1000.avif 1000w, /img/bibliotheque-1600.avif 1600w, /img/bibliotheque-2392.avif 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472">
+            <img class="ecran" src="/img/bibliotheque-1000.webp" srcset="/img/bibliotheque-1000.webp 1000w, /img/bibliotheque-1600.webp 1600w, /img/bibliotheque-2392.webp 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472" loading="lazy" decoding="async" alt="La bibliothèque sur ordinateur, 50 titres : à gauche les filtres par type (séries, films, animés, mangas, romans) et par statut avec leurs nombres, à droite les affiches de The Office, Severance, Dan Da Dan, Frieren, Silo, Whiplash, Past Lives, Solo Leveling, The Bear et Vinland Saga, avec la progression sous chacune.">
           </picture>
         </figure>
       </div>
@@ -293,7 +293,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       <figure class="tel-seul">
         <picture>
           <source type="image/avif" srcset="/img/telephone-annee-390.avif 390w, /img/telephone-annee-780.avif 780w" sizes="300px">
-          <img class="ecran ecran-tel tel" src="/img/telephone-annee-390.webp" srcset="/img/telephone-annee-390.webp 390w, /img/telephone-annee-780.webp 780w" sizes="300px" width="780" height="1340" loading="lazy" decoding="async" alt="Mon année 2026 sur téléphone : 13 jours regardés, 29 titres, 421 épisodes, 9 films et 654 chapitres, puis les séries les plus regardées, The Office en tête.">
+          <img class="ecran ecran-tel tel" src="/img/telephone-annee-390.webp" srcset="/img/telephone-annee-390.webp 390w, /img/telephone-annee-780.webp 780w" sizes="300px" width="780" height="1340" loading="lazy" decoding="async" alt="Mon année 2026 sur téléphone : 12 jours et 23 heures regardés, 29 titres, 420 épisodes, 9 films et 654 chapitres, puis les séries les plus regardées, The Office en tête.">
         </picture>
       </figure>
     </section>
@@ -326,7 +326,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
         </div>
         <div>
           <h3>Est-ce que je peux reprendre mon historique TV&nbsp;Time&#8239;?</h3>
-          <p>Oui. Demande ton export dans les réglages de ton compte sur tvtime.com, puis choisis le fichier dans Mirinu, sous «&nbsp;Importer un historique&nbsp;». Mirinu reprend les épisodes vus, les revisionnages, les films et le statut de chaque série. Les exports de Trakt, MyAnimeList, Letterboxd et Netflix se reprennent de la même façon.</p>
+          <p>Oui. Demande l'export de tes données à TV&nbsp;Time, puis choisis le fichier dans Mirinu, sous «&nbsp;Importer un historique&nbsp;». Mirinu reprend les épisodes vus, les revisionnages, les films et le statut de chaque série. Les exports de Trakt, MyAnimeList, Letterboxd et Netflix se reprennent de la même façon.</p>
         </div>
         <div>
           <h3>Où sont mes données&#8239;?</h3>
