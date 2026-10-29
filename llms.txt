@@ -31,6 +31,8 @@ Gratuit, sans publicité ni achat dans l'app. Des dons facultatifs pourraient ê
 - Confidentialité : https://mirinu.ch/confidentialite/
 - Conditions d'utilisation : https://mirinu.ch/conditions/
 - Supprimer ses données : https://mirinu.ch/supprimer/
+- Version anglaise de la page d'accueil : https://mirinu.ch/en/
+- Pages juridiques en anglais (la version française fait foi) : https://mirinu.ch/en/privacy/, https://mirinu.ch/en/terms/, https://mirinu.ch/en/delete/
 - Contact : contact@mirinu.ch
 
 Mirinu uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.

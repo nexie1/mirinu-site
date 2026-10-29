@@ -35,10 +35,17 @@ strong{color:var(--texte);font-weight:600}
 .marque:hover{color:var(--texte)}
 .bouton-discret{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid var(--trait);border-radius:999px;color:var(--texte);font-weight:600;font-size:.9375rem;text-decoration:none;transition:border-color .15s ease}
 .bouton-discret:hover{border-color:var(--violet);color:var(--texte)}
+.outils{display:flex;align-items:center;gap:6px}
+.langues{display:flex}
+.langues a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding-inline:4px;color:var(--gris);font-size:.875rem;font-weight:600;letter-spacing:.04em;text-decoration:none}
+.langues a:hover{color:var(--texte)}
+.langues a[aria-current="page"]{color:var(--texte);text-decoration:underline;text-decoration-color:var(--violet);text-decoration-thickness:2px;text-underline-offset:.45em}
+@media (max-width:419px){.langues a[aria-current="page"]{display:none}}
 
 /* Texte */
 .entete{padding-block:clamp(12px,2vw,24px) 0;max-width:42rem}
 .date{margin-top:10px;color:var(--gris);font-size:.875rem}
+.foi{margin-top:2px;color:var(--gris);font-size:.875rem}
 .chapeau{margin-top:20px;color:var(--texte-2)}
 .rubriques{margin-top:clamp(28px,4vw,40px);display:grid;gap:28px 64px;align-items:start}
 @media (min-width:960px){.rubriques{grid-template-columns:1fr 1fr}}
