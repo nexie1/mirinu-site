@@ -31,7 +31,7 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Privacy</h1>
       <p class="date">Updated on October 29, 2026.</p>
@@ -42,7 +42,7 @@
     <div class="rubriques">
       <section aria-labelledby="appareil">
         <h2 id="appareil">On your device</h2>
-        <p>Mirinu has no account and asks for neither your name nor your email address. Your library, your ratings and your settings stay on your device: in the app on Android, in the browser's storage on app.mirinu.ch, without cookies. A file you import is read on the spot and sent nowhere.</p>
+        <p>The account is optional. Without an account, Mirinu asks for neither your name nor your email address. Your library, your ratings and your settings stay on your device: in the app on Android, in the browser's storage on app.mirinu.ch, without cookies. A file you import is read on the spot and sent nowhere.</p>
         <p>On Android, if your phone's Google backup is on, it may copy your library, as it does for your other apps.</p>
         <p>No ads, no trackers, no audience measurement.</p>
       </section>
@@ -57,6 +57,15 @@
         <h2 id="synchro">Sync and security</h2>
         <p>If you link several devices, your library is encrypted on your device before it is sent to the relay. The relay only keeps data it cannot read, and the key never goes through it in the clear.</p>
         <p>If you find a security flaw, write to <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> before making it public.</p>
+      </section>
+
+      <section aria-labelledby="compte">
+        <h2 id="compte">With an account</h2>
+        <p>The account is only for people aged 15 or over. It lets you get your library back if you lose your device, and manage your devices from any browser. Like sync, it serves the service you ask for.</p>
+        <p>The relay keeps your email address, encrypted; if you sign in with Google, an unreadable identifier of your Google account and its address, encrypted. It also keeps the list of your devices (type and dates, to the day) and your encrypted library, which it cannot read. Your recovery code never leaves your devices.</p>
+        <p>Sign-in codes and security notices are sent from <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>, through Infomaniak (Switzerland). Mirinu never writes to advertise. If you sign in with Google, Google knows that you use Mirinu; Google adheres to the Data Privacy Framework.</p>
+        <p>Before a code is emailed, a Cloudflare anti-bot check (Turnstile) reads your IP address and information about your browser. To curb abuse, the relay also counts requests per IP address, in an unreadable form erased after 2&nbsp;days. These protections rest on the legitimate interest in protecting the service.</p>
+        <p>A sign-in code is valid for 10&nbsp;minutes. Account data stays as long as the account exists. You can delete it whenever you want: it is erased 7&nbsp;days after your request, then leaves the relay's backups within 7 more days. An account inactive for 24&nbsp;months is erased, after a warning email.</p>
       </section>
 
       <section aria-labelledby="prestataires">
