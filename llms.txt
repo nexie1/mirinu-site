@@ -1,10 +1,10 @@
 # Mirinu
 
-> Mirinu est une app gratuite pour suivre séries, films, animés, mangas et romans, sur le web (https://app.mirinu.ch/) et bientôt sur Android. Elle marche sans compte : la bibliothèque reste sur l'appareil de la personne. Un compte facultatif (Google ou code par mail) en garde une copie chiffrée de bout en bout, que Mirinu ne peut pas lire. Projet personnel de Marco, fait en Suisse.
+> Mirinu est une app gratuite pour suivre séries, films, animés, mangas, light novels et BD, sur le web (https://app.mirinu.ch/) et bientôt sur Android. Elle marche sans compte : la bibliothèque reste sur l'appareil de la personne. Un compte facultatif (Google ou code par mail) en garde une copie chiffrée de bout en bout, que Mirinu ne peut pas lire. Projet personnel de Marco, fait en Suisse.
 
 ## Ce que fait l'app
 
-- Liste « À voir » : pour chaque série, le prochain épisode et le nombre d'épisodes restants ; pour un manga ou un roman, le prochain chapitre.
+- Liste « À voir » : pour chaque série, le prochain épisode et le nombre d'épisodes restants ; pour un manga ou un light novel, le prochain chapitre.
 - Fiche d'un titre : progression, saisons et épisodes, note sur dix, note personnelle, estimation du jour où l'on aura rattrapé la diffusion à son rythme.
 - Onglet « À venir » : prochains épisodes et chapitres par date, en liste ou en calendrier. La date du prochain chapitre d'un manga est une estimation, signalée comme telle.
 - Sur Android : notification à la sortie d'un épisode, avec un bouton pour le marquer vu, et un widget d'écran d'accueil avec les trois prochains épisodes à regarder.
