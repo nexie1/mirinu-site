@@ -18,7 +18,7 @@
 - Pas de compte, pas d'adresse mail demandée. Un compte facultatif est prévu plus tard.
 - Pas de publicité, pas de traqueur, pas de mesure d'audience, ni dans l'app ni sur mirinu.ch.
 - Synchronisation facultative entre appareils, reliés par un code ou un QR code valable deux minutes. Les données sont chiffrées sur l'appareil (AES-256-GCM) avant d'être envoyées ; le relais ne peut pas les lire et efface ce qui ne sert plus depuis 180 jours.
-- Les métadonnées (affiches, résumés, dates) viennent de TMDB, MangaUpdates et MangaDex, qui ne reçoivent que le titre recherché.
+- Les métadonnées (affiches, résumés, dates) viennent de TMDB et MangaUpdates, qui ne reçoivent que le titre recherché.
 
 ## Prix
 
