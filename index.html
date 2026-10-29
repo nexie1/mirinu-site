@@ -6,6 +6,9 @@
 <title>Mirinu, l'app gratuite pour suivre séries, animés et mangas</title>
 <meta name="description" content="Mirinu est une app gratuite pour suivre tes séries, films, animés, mangas et romans. Une alternative à TV Time qui reprend ton historique, sans compte obligatoire ni pub.">
 <link rel="canonical" href="https://mirinu.ch/">
+<link rel="alternate" hreflang="fr" href="https://mirinu.ch/">
+<link rel="alternate" hreflang="en" href="https://mirinu.ch/en/">
+<link rel="alternate" hreflang="x-default" href="https://mirinu.ch/">
 <meta name="theme-color" content="#0B0E13">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -14,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mirinu">
 <meta property="og:locale" content="fr_CH">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://mirinu.ch/">
 <meta property="og:title" content="Mirinu : tout ce que tu regardes et lis, au même endroit">
 <meta property="og:description" content="App gratuite pour suivre séries, films, animés, mangas et romans, sur le web et bientôt sur Android. Sans compte obligatoire ni publicité.">
@@ -68,6 +72,12 @@ p+p{margin-top:.9em}
 .bouton:hover{background:var(--violet-survol);color:#fff}
 .bouton-discret{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid var(--trait);border-radius:999px;color:var(--texte);font-weight:600;font-size:.9375rem;text-decoration:none;transition:border-color .15s ease}
 .bouton-discret:hover{border-color:var(--violet);color:var(--texte)}
+.outils{display:flex;align-items:center;gap:6px}
+.langues{display:flex}
+.langues a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding-inline:4px;color:var(--gris);font-size:.875rem;font-weight:600;letter-spacing:.04em;text-decoration:none}
+.langues a:hover{color:var(--texte)}
+.langues a[aria-current="page"]{color:var(--texte);text-decoration:underline;text-decoration-color:var(--violet);text-decoration-thickness:2px;text-underline-offset:.45em}
+@media (max-width:419px){.langues a[aria-current="page"]{display:none}}
 
 /* Premier écran */
 .intro{padding-block:clamp(32px,6vw,72px) 0}
@@ -170,7 +180,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       "@id": "https://mirinu.ch/#site",
       "url": "https://mirinu.ch/",
       "name": "Mirinu",
-      "inLanguage": "fr"
+      "inLanguage": ["fr", "en"]
     },
     {
       "@type": "FAQPage",
@@ -218,7 +228,13 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
 <div class="page">
   <header class="haut">
     <a class="marque" href="/" aria-label="Mirinu, page d'accueil"><img src="/img/icone-64.png" width="36" height="36" alt="">Mirinu</a>
-    <a class="bouton-discret" href="https://app.mirinu.ch/">Ouvrir l'app</a>
+    <div class="outils">
+      <nav class="langues" aria-label="Langue">
+        <a href="/" hreflang="fr" aria-label="Français" aria-current="page">FR</a>
+        <a href="/en/" hreflang="en" lang="en" aria-label="English">EN</a>
+      </nav>
+      <a class="bouton-discret" href="https://app.mirinu.ch/">Ouvrir l'app</a>
+    </div>
   </header>
 
   <main id="contenu">
