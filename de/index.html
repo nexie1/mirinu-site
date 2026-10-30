@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirinu, die kostenlose App für Serien, Animes und Mangas</title>
+<meta name="description" content="Mirinu ist eine kostenlose App für deine Serien, Filme, Animes, Mangas, Light Novels, Comics und Romane. Eine Alternative zu TV Time, die deinen Verlauf übernimmt, ohne Kontopflicht und ohne Werbung.">
+<link rel="canonical" href="https://mirinu.ch/de/">
+<link rel="alternate" hreflang="fr" href="https://mirinu.ch/">
+<link rel="alternate" hreflang="en" href="https://mirinu.ch/en/">
+<link rel="alternate" hreflang="de" href="https://mirinu.ch/de/">
+<link rel="alternate" hreflang="it" href="https://mirinu.ch/it/">
+<link rel="alternate" hreflang="es" href="https://mirinu.ch/es/">
+<link rel="alternate" hreflang="x-default" href="https://mirinu.ch/">
+<meta name="theme-color" content="#0B0E13">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mirinu">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="fr_CH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:url" content="https://mirinu.ch/de/">
+<meta property="og:title" content="Mirinu: alles, was du schaust und liest, an einem Ort">
+<meta property="og:description" content="Kostenlose App für Serien, Filme, Animes, Mangas, Light Novels, Comics und Romane, im Web und bald auf Android. Ohne Kontopflicht und ohne Werbung.">
+<meta property="og:image" content="https://mirinu.ch/img/de/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mirinu mit dem Satz „Alles, was du schaust und liest, an einem Ort“ und der Startseite am Computer: Black Clover groß, darunter die Liste Als Nächstes.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mirinu: alles, was du schaust und liest, an einem Ort">
+<meta name="twitter:description" content="Kostenlose App für Serien, Filme, Animes, Mangas, Light Novels, Comics und Romane, im Web und bald auf Android. Ohne Kontopflicht und ohne Werbung.">
+<meta name="twitter:image" content="https://mirinu.ch/img/de/og-image.jpg">
+<link rel="preload" href="/fonts/bricolage-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";src:url(/fonts/inter-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Inter";src:url(/fonts/inter-600.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(/fonts/bricolage-700.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+:root{
+  --nuit:#0B0E13;--ardoise:#151A22;--carte:#1B212B;--trait:#262D39;
+  --texte:#F5F7FA;--texte-2:#C4CAD5;--gris:#8A93A6;
+  --violet:#937BF4;--violet-fond:#6C4CF0;--violet-survol:#5836E2;
+  --titre:"Bricolage Grotesque",Inter,system-ui,sans-serif;
+  --corps:Inter,"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --gouttiere:clamp(16px,4vw,32px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--nuit);color:var(--texte-2);font-family:var(--corps);font-size:1rem;line-height:1.6;overflow-x:hidden}
+@media (min-width:720px){body{font-size:1.0625rem}}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--violet);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:#B3A2F8}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
+h1,h2{font-family:var(--titre);font-weight:700;color:var(--texte);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.5rem,1.4rem + 4.4vw,4.75rem);line-height:1.02}
+h2{font-size:clamp(1.75rem,1.25rem + 1.7vw,2.6rem);line-height:1.08}
+h3{font-family:var(--corps);font-weight:600;font-size:1.0625rem;line-height:1.4;color:var(--texte);margin:0}
+p{margin:0}
+p+p{margin-top:.9em}
+.page{max-width:1200px;margin-inline:auto;padding-inline:var(--gouttiere)}
+.saut{position:absolute;left:var(--gouttiere);top:-100px;background:var(--violet-fond);color:#fff;padding:12px 16px;border-radius:8px;z-index:10}
+.saut:focus{top:12px}
+
+/* En-tête */
+.haut{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px}
+.marque{display:flex;align-items:center;gap:10px;color:var(--texte);text-decoration:none;font-family:var(--titre);font-weight:700;font-size:1.5rem;letter-spacing:-.01em;min-height:44px}
+.marque img{width:36px;height:36px;border-radius:9px}
+.marque:hover{color:var(--texte)}
+
+/* Boutons */
+.bouton{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;background:var(--violet-fond);color:#fff;font-weight:600;font-size:1rem;line-height:1.2;text-decoration:none;transition:background-color .15s ease}
+.bouton:hover{background:var(--violet-survol);color:#fff}
+.bouton-discret{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid var(--trait);border-radius:999px;color:var(--texte);font-weight:600;font-size:.9375rem;text-decoration:none;transition:border-color .15s ease}
+.bouton-discret:hover{border-color:var(--violet);color:var(--texte)}
+.outils{display:flex;align-items:center;gap:6px}
+.langues{position:relative}
+.langues summary{display:flex;align-items:center;gap:6px;min-width:44px;min-height:44px;padding-inline:8px;border-radius:8px;color:var(--gris);font-size:.875rem;font-weight:600;letter-spacing:.04em;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+.langues summary::-webkit-details-marker{display:none}
+.langues summary::after{content:"";width:6px;height:6px;margin:-3px 2px 0;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg)}
+.langues summary:hover,.langues [open] summary{color:var(--texte)}
+.langues [open] summary::before{content:"";position:fixed;inset:0;z-index:20;cursor:default}
+.langues [open] summary::after{margin-top:3px;transform:rotate(225deg)}
+.drapeau{flex:none;border-radius:2px;box-shadow:0 0 0 1px #ffffff2e}
+.langue-nom{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.langues ul{position:absolute;right:0;top:100%;z-index:21;margin:4px 0 0;padding:6px;min-width:168px;list-style:none;background:var(--carte);border:1px solid var(--trait);border-radius:10px;box-shadow:0 8px 24px #0006}
+.langues a{display:flex;align-items:center;gap:10px;min-height:44px;padding-inline:10px;border-radius:6px;color:var(--texte-2);font-size:.9375rem;text-decoration:none}
+.langues a:hover{background:var(--trait);color:var(--texte)}
+.langues a[aria-current="page"]{color:var(--texte);font-weight:600;text-decoration:underline;text-decoration-color:var(--violet);text-decoration-thickness:2px;text-underline-offset:.35em}
+@media (min-width:720px){.langue-nom{position:static;width:auto;height:auto;clip-path:none}.langue-code{display:none}}
+.marque,.bouton-discret{white-space:nowrap}
+h1{overflow-wrap:break-word}
+@media (max-width:379px){.langue-code{display:none}.haut{gap:8px}}
+@media (max-width:349px){.marque{font-size:1.25rem;gap:8px}.marque img{width:32px;height:32px}.langues summary{padding-inline:4px;gap:4px}.bouton-discret{padding-inline:10px;font-size:.875rem}.outils{gap:2px}}
+
+/* Premier écran */
+.intro{padding-block:clamp(32px,6vw,72px) 0}
+.intro h1 .ligne{display:inline}
+@media (min-width:1000px){.intro h1 .ligne{display:block}}
+.chapeau{margin-top:24px;max-width:36rem;font-size:1.125rem;color:var(--texte-2)}
+@media (min-width:720px){.chapeau{font-size:1.25rem}}
+.actions{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.etat{color:var(--gris);font-size:.9375rem}
+.capture-principale{margin:clamp(40px,6vw,64px) 0 0}
+.capture-principale img{border:1px solid var(--trait);border-radius:12px}
+@media (max-width:719px){.capture-principale img{width:min(100%,320px);border-radius:22px}}
+
+/* Écrans de l'app */
+.ecran{border:1px solid var(--trait);border-radius:10px;background:var(--ardoise)}
+.ecran-tel{border-radius:22px}
+figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
+
+/* Sections */
+.bloc{padding-block:clamp(72px,10vw,128px) 0}
+.bloc>.texte{max-width:38rem}
+.bloc h2+p,.texte h2+p{margin-top:20px}
+.duo{display:grid;gap:40px}
+.duo figure{margin:0}
+@media (min-width:960px){
+  .duo{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+  .duo.inverse>.texte{order:2}
+}
+.paire{display:flex;gap:clamp(12px,3vw,28px);align-items:flex-start}
+.paire>picture{flex:1 1 0;max-width:300px}
+.tel{width:min(300px,100%)}
+.tel-seul{display:flex;justify-content:center}
+@media (max-width:719px){.paire .doublon{display:none}.tel-seul{justify-content:flex-start}}
+.synchro img{width:min(360px,100%)}
+.large{margin-top:40px}
+.large figure{margin:0}
+
+.colonnes{display:grid;gap:56px}
+@media (min-width:880px){.colonnes{grid-template-columns:1fr 1fr;gap:64px}}
+.sources{margin-top:20px;color:var(--texte);font-weight:600}
+
+/* Questions */
+.questions{margin-top:40px;display:grid;gap:32px 64px}
+@media (min-width:880px){.questions{grid-template-columns:1fr 1fr}}
+.questions div{border-top:1px solid var(--trait);padding-top:20px}
+.questions p{margin-top:8px}
+
+/* Mot de Marco */
+.mot{display:grid;gap:32px;align-items:end}
+@media (min-width:720px){.mot{grid-template-columns:minmax(0,38rem) auto;gap:56px}}
+.mot .signature{margin-top:20px;font-family:var(--titre);font-weight:700;font-size:1.375rem;color:var(--texte)}
+.lucky{margin:0;max-width:220px}
+.lucky img{width:160px}
+.lucky figcaption{max-width:220px}
+
+/* Fin */
+.fin{padding-block:clamp(72px,10vw,128px) clamp(48px,6vw,72px)}
+.fin .bouton{margin-top:24px}
+.pied{border-top:1px solid var(--trait);padding-block:32px 40px;color:var(--gris);font-size:.875rem;line-height:1.6;display:grid;gap:20px}
+@media (min-width:880px){.pied{grid-template-columns:auto 1fr;gap:20px 64px}}
+.pied p+p{margin-top:2px}
+.pied a{display:inline-flex;align-items:center;min-height:44px}
+.tmdb{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.tmdb img{width:120px;height:auto}
+.tmdb a{min-height:44px}
+.pied .vo{color:var(--gris);margin-top:10px}
+.pied .liens{display:flex;flex-wrap:wrap;gap:0 20px}
+.pied .liens a{color:var(--gris)}
+.pied .liens a:hover{color:var(--texte)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://mirinu.ch/de/#app",
+      "name": "Mirinu",
+      "url": "https://app.mirinu.ch/",
+      "description": "Mirinu ist eine kostenlose App für Serien, Filme, Animes, Mangas, Light Novels, Comics und Romane, im Web und bald auf Android.",
+      "applicationCategory": "EntertainmentApplication",
+      "operatingSystem": "Web, Android (bald)",
+      "browserRequirements": "Ein aktueller Browser",
+      "inLanguage": ["fr", "en", "de", "it", "es"],
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CHF" },
+      "image": "https://mirinu.ch/og-image.jpg",
+      "author": { "@id": "https://mirinu.ch/#marco" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://mirinu.ch/#marco",
+      "name": "Marco",
+      "email": "contact@mirinu.ch"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mirinu.ch/#site",
+      "url": "https://mirinu.ch/",
+      "name": "Mirinu",
+      "inLanguage": ["fr", "en", "de", "it", "es"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mirinu.ch/de/#questions",
+      "inLanguage": "de",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ist Mirinu kostenlos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Mirinu ist kostenlos, ohne Werbung und ohne Käufe in der App." }
+        },
+        {
+          "@type": "Question",
+          "name": "Muss ich ein Konto erstellen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nein. Mirinu funktioniert ohne Konto und ohne E-Mail-Adresse. Mit einem freiwilligen Konto, über Google oder einen Code per E-Mail, findest du deine Bibliothek wieder, wenn du dein Telefon verlierst. Sie bleibt verschlüsselt: Mirinu kann sie nicht lesen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich meinen Verlauf von TV Time übernehmen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Fordere bei TV Time einen Export deiner Daten an und wähle die Datei dann in Mirinu unter „Verlauf importieren“ aus. Mirinu übernimmt gesehene Folgen, erneutes Ansehen, Filme und den Status jeder Serie. Exporte von Trakt, MyAnimeList, Letterboxd und Netflix funktionieren genauso." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wo sind meine Daten?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Auf deinem Gerät: in der App unter Android und im Speicher deines Browsers in der Web-Version, ohne Cookies. Wenn du zwei Geräte verbindest, läuft deine Bibliothek verschlüsselt über den Relay-Server von Mirinu, und der Relay-Server löscht, was seit 180 Tagen nicht mehr genutzt wurde." }
+        },
+        {
+          "@type": "Question",
+          "name": "Auf welchen Geräten läuft Mirinu?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Im Browser, unter app.mirinu.ch. Die Android-App kommt bald in den Play Store. Für das iPhone gibt es vorerst keine App." }
+        },
+        {
+          "@type": "Question",
+          "name": "In welchen Sprachen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Französisch, Englisch, Deutsch, Italienisch und Spanisch." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="saut" href="#contenu">Zum Inhalt springen</a>
+<div class="page">
+  <header class="haut">
+    <a class="marque" href="/de/" aria-label="Mirinu, Startseite"><img src="/img/icone-64.png" width="36" height="36" alt="">Mirinu</a>
+    <div class="outils">
+      <nav class="langues" aria-label="Sprache">
+        <details>
+          <summary><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#000" d="M0 0h3v.67H0z"/><path fill="#D00" d="M0 .67h3v.67H0z"/><path fill="#FFCE00" d="M0 1.33h3V2H0z"/></svg><span class="langue-nom">Deutsch</span><span class="langue-code" aria-hidden="true">DE</span></summary>
+          <ul>
+            <li><a href="/" hreflang="fr" lang="fr"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#002654" d="M0 0h1v2H0z"/><path fill="#fff" d="M1 0h1v2H1z"/><path fill="#CE1126" d="M2 0h1v2H2z"/></svg>Français</a></li>
+            <li><a href="/en/" hreflang="en" lang="en"><svg class="drapeau" viewBox="0 0 60 40" width="21" height="14" aria-hidden="true"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="M0 0l60 40M60 0L0 40"/><path stroke="#C8102E" stroke-width="3" d="M0 0l60 40M60 0L0 40"/><path stroke="#fff" stroke-width="13" d="M30 0v40M0 20h60"/><path stroke="#C8102E" stroke-width="8" d="M30 0v40M0 20h60"/></svg>English</a></li>
+            <li><a href="/de/" hreflang="de" aria-current="page"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#000" d="M0 0h3v.67H0z"/><path fill="#D00" d="M0 .67h3v.67H0z"/><path fill="#FFCE00" d="M0 1.33h3V2H0z"/></svg>Deutsch</a></li>
+            <li><a href="/it/" hreflang="it" lang="it"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#009246" d="M0 0h1v2H0z"/><path fill="#fff" d="M1 0h1v2H1z"/><path fill="#CE2B37" d="M2 0h1v2H2z"/></svg>Italiano</a></li>
+            <li><a href="/es/" hreflang="es" lang="es"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#AA151B" d="M0 0h3v2H0z"/><path fill="#F1BF00" d="M0 .5h3v1H0z"/></svg>Español</a></li>
+          </ul>
+        </details>
+      </nav>
+      <a class="bouton-discret" href="https://app.mirinu.ch/">App öffnen</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="intro" aria-labelledby="titre">
+      <h1 id="titre"><span class="ligne">Alles, was du schaust</span> <span class="ligne">und liest, an&nbsp;einem Ort.</span></h1>
+      <p class="chapeau">Mirinu ist eine kostenlose App für Serien, Filme, Animes, Mangas, Light Novels, Comics und Romane, im Web und bald auf Android. Du hakst ab, was du gesehen hast, und Mirinu zeigt dir, was als Nächstes kommt.</p>
+      <div class="actions">
+        <a class="bouton" href="https://app.mirinu.ch/">Mirinu im Browser öffnen</a>
+        <span class="etat">Android: bald im Play Store.</span>
+      </div>
+      <figure class="capture-principale">
+        <picture>
+          <source media="(max-width: 719px)" type="image/avif" srcset="/img/de/telephone-avoir-390.avif 390w, /img/de/telephone-avoir-780.avif 780w" sizes="320px" width="780" height="1440">
+          <source media="(max-width: 719px)" type="image/webp" srcset="/img/de/telephone-avoir-390.webp 390w, /img/de/telephone-avoir-780.webp 780w" sizes="320px" width="780" height="1440">
+          <source type="image/avif" srcset="/img/de/accueil-ordinateur-1200.avif 1200w, /img/de/accueil-ordinateur-1800.avif 1800w, /img/de/accueil-ordinateur-2400.avif 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800">
+          <img src="/img/de/accueil-ordinateur-1200.webp" srcset="/img/de/accueil-ordinateur-1200.webp 1200w, /img/de/accueil-ordinateur-1800.webp 1800w, /img/de/accueil-ordinateur-2400.webp 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800" fetchpriority="high" alt="Die Startseite von Mirinu: die nächste Folge jeder Serie mit einem Kreis zum Abhaken. Am Computer Black Clover groß mit den Schaltflächen Als gesehen markieren und Titelseite öffnen, darunter die Liste Als Nächstes und rechts eine Idee für heute Abend und die nächsten Termine mit dem Link Kalender.">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="bloc duo" aria-labelledby="suivre">
+      <div class="texte">
+        <h2 id="suivre">Folge abhaken, die nächste wartet schon.</h2>
+        <p>Die Liste Als&nbsp;Nächstes zeigt dir für jede Serie die nächste Folge und wie viele Folgen dir noch bleiben. Bei einem Manga oder einer Light Novel ist es das nächste Kapitel.</p>
+        <p>Auf der Seite einer Serie, die du gerade schaust, schätzt Mirinu, ungefähr an welchem Tag du in deinem Tempo die neueste Folge erreichst. Du kannst jeden Titel mit bis zu zehn Punkten bewerten und dir eine Notiz dazu speichern.</p>
+      </div>
+      <div class="paire">
+        <picture class="doublon">
+          <source type="image/avif" srcset="/img/de/telephone-avoir-390.avif 390w, /img/de/telephone-avoir-780.avif 780w" sizes="(min-width: 960px) 300px, 45vw">
+          <img class="ecran ecran-tel" src="/img/de/telephone-avoir-390.webp" srcset="/img/de/telephone-avoir-390.webp 390w, /img/de/telephone-avoir-780.webp 780w" sizes="(min-width: 960px) 300px, 45vw" width="780" height="1440" loading="lazy" decoding="async" alt="Die Liste Als Nächstes auf dem Telefon: Black Clover Staffel 2 Folge 5, Die Tagebücher der Apothekerin Staffel 1 Folge 51 mit 2 weiteren Folgen, JoJo's Bizarre Adventure Staffel 6 Folge 7, MobLand: Familie bis aufs Blut und Tulsa King, jeweils mit einem Kreis zum Abhaken und dem Hinweis Neu.">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="/img/de/telephone-fiche-390.avif 390w, /img/de/telephone-fiche-780.avif 780w" sizes="(min-width: 960px) 300px, (min-width: 720px) 45vw, 300px">
+          <img class="ecran ecran-tel tel" src="/img/de/telephone-fiche-390.webp" srcset="/img/de/telephone-fiche-390.webp 390w, /img/de/telephone-fiche-780.webp 780w" sizes="(min-width: 960px) 300px, (min-width: 720px) 45vw, 300px" width="780" height="1440" loading="lazy" decoding="async" alt="Die Seite von Severance auf dem Telefon: 15 von 19 Folgen gesehen und der Satz „In deinem Tempo holst du die Ausstrahlung um den 6. November ein“, dann die Liste der Staffeln.">
+        </picture>
+      </div>
+    </section>
+
+    <section class="bloc colonnes" aria-label="Neuerscheinungen und Import">
+      <div>
+        <h2 id="sorties">Neuerscheinungen, Tag für Tag.</h2>
+        <p>Der Tab Demnächst ordnet die nächsten Folgen und Kapitel nach Datum, als Liste oder als Kalender. Was schon erschienen ist und du noch nicht gesehen hast, bleibt oben.</p>
+        <p>Bei Mangas ist das Datum des nächsten Kapitels eine Schätzung, und Mirinu schreibt das auch dazu. Unter Android meldet eine Benachrichtigung, wenn eine Folge erscheint, mit einer Schaltfläche, um sie als gesehen zu markieren, und ein Widget auf dem Startbildschirm zeigt die nächsten drei Folgen.</p>
+      </div>
+      <div>
+        <h2 id="import">Übernimm deinen Verlauf von TV&nbsp;Time oder Trakt.</h2>
+        <p>Wenn du von einer anderen App kommst, liest Mirinu die Exportdatei, die du auswählst, und erkennt selbst, woher sie stammt. Du siehst vorher, was sich ändert, und nichts wird gespeichert, bevor du bestätigst. Die Datei bleibt auf deinem Gerät.</p>
+        <p class="sources">TV Time, Trakt, MyAnimeList, Letterboxd, Netflix.</p>
+      </div>
+    </section>
+
+    <section class="bloc" aria-labelledby="bibliotheque">
+      <div class="texte">
+        <h2 id="bibliotheque">Sortiere und filtere deine ganze Bibliothek.</h2>
+        <p>Filtere nach Typ und Status, mit der Anzahl der Titel pro Filter. Sortiere nach letzter Aktivität, Titel, Bewertung oder Datum des Hinzufügens. Am Computer bleiben die Filter links offen und deine eigenen Listen in der Seitenleiste.</p>
+      </div>
+      <div class="large">
+        <figure>
+          <picture>
+            <source media="(max-width: 719px)" type="image/avif" srcset="/img/de/telephone-bibliotheque-390.avif 390w, /img/de/telephone-bibliotheque-780.avif 780w" sizes="300px" width="780" height="1160">
+            <source media="(max-width: 719px)" type="image/webp" srcset="/img/de/telephone-bibliotheque-390.webp 390w, /img/de/telephone-bibliotheque-780.webp 780w" sizes="300px" width="780" height="1160">
+            <source type="image/avif" srcset="/img/de/bibliotheque-1000.avif 1000w, /img/de/bibliotheque-1600.avif 1600w, /img/de/bibliotheque-2392.avif 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472">
+            <img class="ecran" src="/img/de/bibliotheque-1000.webp" srcset="/img/de/bibliotheque-1000.webp 1000w, /img/de/bibliotheque-1600.webp 1600w, /img/de/bibliotheque-2392.webp 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472" loading="lazy" decoding="async" alt="Die Bibliothek, 66 Titel. Am Computer links die Filter nach Typ (Serien, Filme, Animes, Mangas, Light Novels, Comics, Romane) und nach Status mit ihrer Anzahl, rechts die Poster von Dragon Ball Super, The Office, Godzilla Minus Zero, Severance, Dan Da Dan, Die Tribute von Panem, Frieren, Mushoku Tensei, Silo und Black Clover, mit dem Fortschritt darunter.">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <section class="bloc duo inverse" aria-labelledby="annee">
+      <div class="texte">
+        <h2 id="annee">Dein Jahr in Zahlen.</h2>
+        <p>Mein&nbsp;Jahr zählt die Zeit, die du mit deinen Serien und Filmen verbracht hast, und die Folgen, Filme und Kapitel des Jahres, Monat für Monat, mit deinen Rekorden. Daraus kannst du ein Bild zum Teilen machen.</p>
+        <p>Dein Profil zeigt die Summe seit Beginn, deine meistgesehenen Genres und eine Karte deiner Aktivität, Woche für Woche.</p>
+      </div>
+      <figure class="tel-seul">
+        <picture>
+          <source type="image/avif" srcset="/img/de/telephone-annee-390.avif 390w, /img/de/telephone-annee-780.avif 780w" sizes="300px">
+          <img class="ecran ecran-tel tel" src="/img/de/telephone-annee-390.webp" srcset="/img/de/telephone-annee-390.webp 390w, /img/de/telephone-annee-780.webp 780w" sizes="300px" width="780" height="1340" loading="lazy" decoding="async" alt="Mein Jahr 2026 auf dem Telefon: 21 Tage und 15 Stunden gesehen, 40 Titel, 895 Folgen, 9 Filme, 654 Manga-Kapitel, 160 Light-Novel-Kapitel, 3 Comic-Alben und 1 Roman, dann die meistgesehenen Serien, The Office an der Spitze.">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="bloc duo" aria-labelledby="donnees">
+      <div class="texte">
+        <h2 id="donnees">Deine Bibliothek bleibt bei dir.</h2>
+        <p>Mirinu verlangt kein Konto. Deine Bibliothek, Bewertungen, Notizen und dein Verlauf liegen auf deinem Gerät. Ein freiwilliges Konto bewahrt eine verschlüsselte Kopie davon auf, damit du sie wiederfindest, wenn du dein Telefon verlierst.</p>
+        <p>Damit du auf dem Telefon und im Browser dieselbe Bibliothek hast, verbindest du deine Geräte mit einem Code oder QR-Code, der zwei Minuten gilt. Alles wird auf dem Gerät verschlüsselt, bevor es losgeht, mit AES-256-GCM: Der Relay-Server von Mirinu speichert nur Blöcke, die er nicht lesen kann.</p>
+        <p>Keine Werbung und keine Tracker, weder in der App noch auf dieser Seite. Poster und Daten kommen von TMDB und MangaUpdates, die nur den gesuchten Titel erhalten.</p>
+      </div>
+      <figure class="tel-seul synchro">
+        <picture>
+          <source type="image/avif" srcset="/img/de/telephone-synchro-390.avif 390w, /img/de/telephone-synchro-780.avif 780w" sizes="360px">
+          <img class="ecran ecran-tel" src="/img/de/telephone-synchro-390.webp" srcset="/img/de/telephone-synchro-390.webp 390w, /img/de/telephone-synchro-780.webp 780w" sizes="360px" width="780" height="960" loading="lazy" decoding="async" alt="Der Bildschirm Synchronisierung auf dem Telefon: „Code anzeigen“, um dieses Gerät mit deiner Bibliothek zu verbinden, „Ich habe einen Code“, um sie an ein anderes Gerät zu senden.">
+        </picture>
+      </figure>
+    </section>
+
+    <section class="bloc" aria-labelledby="questions">
+      <h2 id="questions">Bevor du es ausprobierst</h2>
+      <div class="questions">
+        <div>
+          <h3>Ist Mirinu kostenlos?</h3>
+          <p>Ja. Mirinu ist kostenlos, ohne Werbung und ohne Käufe in der App.</p>
+        </div>
+        <div>
+          <h3>Muss ich ein Konto erstellen?</h3>
+          <p>Nein. Mirinu funktioniert ohne Konto und ohne E-Mail-Adresse. Mit einem freiwilligen Konto, über Google oder einen Code per E-Mail, findest du deine Bibliothek wieder, wenn du dein Telefon verlierst. Sie bleibt verschlüsselt: Mirinu kann sie nicht lesen.</p>
+        </div>
+        <div>
+          <h3>Kann ich meinen Verlauf von TV&nbsp;Time übernehmen?</h3>
+          <p>Ja. Fordere bei TV&nbsp;Time einen Export deiner Daten an und wähle die Datei dann in Mirinu unter „Verlauf importieren“ aus. Mirinu übernimmt gesehene Folgen, erneutes Ansehen, Filme und den Status jeder Serie. Exporte von Trakt, MyAnimeList, Letterboxd und Netflix funktionieren genauso.</p>
+        </div>
+        <div>
+          <h3>Wo sind meine Daten?</h3>
+          <p>Auf deinem Gerät: in der App unter Android und im Speicher deines Browsers in der Web-Version, ohne Cookies. Wenn du zwei Geräte verbindest, läuft deine Bibliothek verschlüsselt über den Relay-Server von Mirinu, und der Relay-Server löscht, was seit 180&nbsp;Tagen nicht mehr genutzt wurde.</p>
+        </div>
+        <div>
+          <h3>Auf welchen Geräten läuft Mirinu?</h3>
+          <p>Im Browser, unter <a href="https://app.mirinu.ch/">app.mirinu.ch</a>. Die Android-App kommt bald in den Play Store. Für das iPhone gibt es vorerst keine App.</p>
+        </div>
+        <div>
+          <h3>In welchen Sprachen?</h3>
+          <p>Französisch, Englisch, Deutsch, Italienisch und Spanisch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloc" aria-labelledby="gratuite">
+      <div class="mot">
+        <div>
+          <h2 id="gratuite">Ein Wort zum Preis</h2>
+          <p style="margin-top:20px">Ich mache Mirinu allein, in der Schweiz, und ich nutze es jeden Tag.</p>
+          <p>Im Moment ist Mirinu kostenlos. Später werde ich wohl Spenden ermöglichen, und sie bleiben freiwillig. Wenn die Community stark wächst, könnte ich über ein Abo nachdenken, um die Server und den Rest zu bezahlen.</p>
+          <p>Was du in Mirinu ablegst, bleibt auf deinem Gerät, und du kannst es jederzeit exportieren.</p>
+          <p class="signature">Marco</p>
+        </div>
+        <figure class="lucky">
+          <img src="/img/lucky-160.webp" srcset="/img/lucky-160.webp 160w, /img/lucky-320.webp 320w" sizes="160px" width="160" height="178" loading="lazy" decoding="async" alt="Lucky, ein kleiner weißer Spitz, gezeichnet, sitzend, mit violettem Halsband.">
+          <figcaption>Lucky, auf dem Icon, ist mein Hund. Mirinu kommt vom japanischen <span lang="ja-Latn">miru</span>, „sehen“, und <span lang="ja-Latn">inu</span>, „Hund“.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="fin" aria-labelledby="essayer">
+      <h2 id="essayer">Mirinu öffnet sich in deinem Browser.</h2>
+      <p style="margin-top:16px;max-width:36rem">Es gibt keine Anmeldung: Du kannst damit anfangen, deinen Verlauf zu importieren oder einen Titel zu suchen.</p>
+      <a class="bouton" href="https://app.mirinu.ch/">Mirinu im Browser öffnen</a>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div>
+      <p>Mirinu, gemacht in der Schweiz.</p>
+      <p><a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a></p>
+      <p class="liens"><a href="/de/datenschutz/">Datenschutz</a> <a href="/de/nutzungsbedingungen/">Nutzungsbedingungen</a> <a href="/de/daten-loeschen/">Deine Daten löschen</a></p>
+    </div>
+    <div>
+      <div class="tmdb">
+        <a href="https://www.themoviedb.org/" aria-label="TMDB"><img src="/img/tmdb.svg" width="120" height="16" alt="TMDB" loading="lazy"></a>
+        <p lang="en">Mirinu uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
+      </div>
+      <p class="vo">Mirinu nutzt TMDB und seine APIs, ohne von TMDB unterstützt oder zertifiziert zu sein. Mangas und Light Novels: MangaUpdates. Die Screenshots zeigen eine Demo-Bibliothek.</p>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){var d=document.querySelector(".langues details");if(!d)return;
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&d.open){d.open=false;d.querySelector("summary").focus()}});
+d.addEventListener("focusout",function(e){if(d.open&&e.relatedTarget&&!d.contains(e.relatedTarget))d.open=false})})();
+</script>
+</body>
+</html>

@@ -8,6 +8,9 @@
 <link rel="canonical" href="https://mirinu.ch/en/">
 <link rel="alternate" hreflang="fr" href="https://mirinu.ch/">
 <link rel="alternate" hreflang="en" href="https://mirinu.ch/en/">
+<link rel="alternate" hreflang="de" href="https://mirinu.ch/de/">
+<link rel="alternate" hreflang="it" href="https://mirinu.ch/it/">
+<link rel="alternate" hreflang="es" href="https://mirinu.ch/es/">
 <link rel="alternate" hreflang="x-default" href="https://mirinu.ch/">
 <meta name="theme-color" content="#0B0E13">
 <meta name="color-scheme" content="dark">
@@ -18,17 +21,20 @@
 <meta property="og:site_name" content="Mirinu">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="fr_CH">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
 <meta property="og:url" content="https://mirinu.ch/en/">
 <meta property="og:title" content="Mirinu: everything you watch and read, in one place">
 <meta property="og:description" content="A free app to track TV shows, movies, anime, manga, light novels, comics and novels, on the web and soon on Android. No account required, no ads.">
-<meta property="og:image" content="https://mirinu.ch/og-image.jpg">
+<meta property="og:image" content="https://mirinu.ch/img/en/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Mirinu's home screen on a computer, in French: the next episode of Slow Horses shown large, then the Up next list.">
+<meta property="og:image:alt" content="Mirinu, with the line “Everything you watch and read, in one place” and the home screen on a computer: Black Clover shown large, then the Up next list.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mirinu: everything you watch and read, in one place">
 <meta name="twitter:description" content="A free app to track TV shows, movies, anime, manga, light novels, comics and novels, on the web and soon on Android. No account required, no ads.">
-<meta name="twitter:image" content="https://mirinu.ch/og-image.jpg">
+<meta name="twitter:image" content="https://mirinu.ch/img/en/og-image.jpg">
 <link rel="preload" href="/fonts/bricolage-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -73,11 +79,24 @@ p+p{margin-top:.9em}
 .bouton-discret{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid var(--trait);border-radius:999px;color:var(--texte);font-weight:600;font-size:.9375rem;text-decoration:none;transition:border-color .15s ease}
 .bouton-discret:hover{border-color:var(--violet);color:var(--texte)}
 .outils{display:flex;align-items:center;gap:6px}
-.langues{display:flex}
-.langues a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding-inline:4px;color:var(--gris);font-size:.875rem;font-weight:600;letter-spacing:.04em;text-decoration:none}
-.langues a:hover{color:var(--texte)}
-.langues a[aria-current="page"]{color:var(--texte);text-decoration:underline;text-decoration-color:var(--violet);text-decoration-thickness:2px;text-underline-offset:.45em}
-@media (max-width:419px){.langues a[aria-current="page"]{display:none}}
+.langues{position:relative}
+.langues summary{display:flex;align-items:center;gap:6px;min-width:44px;min-height:44px;padding-inline:8px;border-radius:8px;color:var(--gris);font-size:.875rem;font-weight:600;letter-spacing:.04em;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+.langues summary::-webkit-details-marker{display:none}
+.langues summary::after{content:"";width:6px;height:6px;margin:-3px 2px 0;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg)}
+.langues summary:hover,.langues [open] summary{color:var(--texte)}
+.langues [open] summary::before{content:"";position:fixed;inset:0;z-index:20;cursor:default}
+.langues [open] summary::after{margin-top:3px;transform:rotate(225deg)}
+.drapeau{flex:none;border-radius:2px;box-shadow:0 0 0 1px #ffffff2e}
+.langue-nom{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.langues ul{position:absolute;right:0;top:100%;z-index:21;margin:4px 0 0;padding:6px;min-width:168px;list-style:none;background:var(--carte);border:1px solid var(--trait);border-radius:10px;box-shadow:0 8px 24px #0006}
+.langues a{display:flex;align-items:center;gap:10px;min-height:44px;padding-inline:10px;border-radius:6px;color:var(--texte-2);font-size:.9375rem;text-decoration:none}
+.langues a:hover{background:var(--trait);color:var(--texte)}
+.langues a[aria-current="page"]{color:var(--texte);font-weight:600;text-decoration:underline;text-decoration-color:var(--violet);text-decoration-thickness:2px;text-underline-offset:.35em}
+@media (min-width:720px){.langue-nom{position:static;width:auto;height:auto;clip-path:none}.langue-code{display:none}}
+.marque,.bouton-discret{white-space:nowrap}
+h1{overflow-wrap:break-word}
+@media (max-width:379px){.langue-code{display:none}.haut{gap:8px}}
+@media (max-width:349px){.marque{font-size:1.25rem;gap:8px}.marque img{width:32px;height:32px}.langues summary{padding-inline:4px;gap:4px}.bouton-discret{padding-inline:10px;font-size:.875rem}.outils{gap:2px}}
 
 /* Premier écran */
 .intro{padding-block:clamp(32px,6vw,72px) 0}
@@ -180,7 +199,7 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       "@id": "https://mirinu.ch/#site",
       "url": "https://mirinu.ch/",
       "name": "Mirinu",
-      "inLanguage": ["fr", "en"]
+      "inLanguage": ["fr", "en", "de", "it", "es"]
     },
     {
       "@type": "FAQPage",
@@ -230,8 +249,16 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
     <a class="marque" href="/en/" aria-label="Mirinu, home page"><img src="/img/icone-64.png" width="36" height="36" alt="">Mirinu</a>
     <div class="outils">
       <nav class="langues" aria-label="Language">
-        <a href="/" hreflang="fr" lang="fr" aria-label="Français">FR</a>
-        <a href="/en/" hreflang="en" aria-label="English" aria-current="page">EN</a>
+        <details>
+          <summary><svg class="drapeau" viewBox="0 0 60 40" width="21" height="14" aria-hidden="true"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="M0 0l60 40M60 0L0 40"/><path stroke="#C8102E" stroke-width="3" d="M0 0l60 40M60 0L0 40"/><path stroke="#fff" stroke-width="13" d="M30 0v40M0 20h60"/><path stroke="#C8102E" stroke-width="8" d="M30 0v40M0 20h60"/></svg><span class="langue-nom">English</span><span class="langue-code" aria-hidden="true">EN</span></summary>
+          <ul>
+            <li><a href="/" hreflang="fr" lang="fr"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#002654" d="M0 0h1v2H0z"/><path fill="#fff" d="M1 0h1v2H1z"/><path fill="#CE1126" d="M2 0h1v2H2z"/></svg>Français</a></li>
+            <li><a href="/en/" hreflang="en" aria-current="page"><svg class="drapeau" viewBox="0 0 60 40" width="21" height="14" aria-hidden="true"><path fill="#012169" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="8" d="M0 0l60 40M60 0L0 40"/><path stroke="#C8102E" stroke-width="3" d="M0 0l60 40M60 0L0 40"/><path stroke="#fff" stroke-width="13" d="M30 0v40M0 20h60"/><path stroke="#C8102E" stroke-width="8" d="M30 0v40M0 20h60"/></svg>English</a></li>
+            <li><a href="/de/" hreflang="de" lang="de"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#000" d="M0 0h3v.67H0z"/><path fill="#D00" d="M0 .67h3v.67H0z"/><path fill="#FFCE00" d="M0 1.33h3V2H0z"/></svg>Deutsch</a></li>
+            <li><a href="/it/" hreflang="it" lang="it"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#009246" d="M0 0h1v2H0z"/><path fill="#fff" d="M1 0h1v2H1z"/><path fill="#CE2B37" d="M2 0h1v2H2z"/></svg>Italiano</a></li>
+            <li><a href="/es/" hreflang="es" lang="es"><svg class="drapeau" viewBox="0 0 3 2" width="21" height="14" aria-hidden="true"><path fill="#AA151B" d="M0 0h3v2H0z"/><path fill="#F1BF00" d="M0 .5h3v1H0z"/></svg>Español</a></li>
+          </ul>
+        </details>
       </nav>
       <a class="bouton-discret" href="https://app.mirinu.ch/">Open the app</a>
     </div>
@@ -247,10 +274,10 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       </div>
       <figure class="capture-principale">
         <picture>
-          <source media="(max-width: 719px)" type="image/avif" srcset="/img/telephone-avoir-390.avif 390w, /img/telephone-avoir-780.avif 780w" sizes="320px" width="780" height="1440">
-          <source media="(max-width: 719px)" type="image/webp" srcset="/img/telephone-avoir-390.webp 390w, /img/telephone-avoir-780.webp 780w" sizes="320px" width="780" height="1440">
-          <source type="image/avif" srcset="/img/accueil-ordinateur-1200.avif 1200w, /img/accueil-ordinateur-1800.avif 1800w, /img/accueil-ordinateur-2400.avif 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800">
-          <img src="/img/accueil-ordinateur-1200.webp" srcset="/img/accueil-ordinateur-1200.webp 1200w, /img/accueil-ordinateur-1800.webp 1800w, /img/accueil-ordinateur-2400.webp 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800" fetchpriority="high" alt="Mirinu's home screen, in French: the next episode of each show with a circle to tick it off. On a computer, Slow Horses shown large with the Mark as watched and Open title page buttons, the Up next list below and, on the right, upcoming releases with the Calendar link.">
+          <source media="(max-width: 719px)" type="image/avif" srcset="/img/en/telephone-avoir-390.avif 390w, /img/en/telephone-avoir-780.avif 780w" sizes="320px" width="780" height="1440">
+          <source media="(max-width: 719px)" type="image/webp" srcset="/img/en/telephone-avoir-390.webp 390w, /img/en/telephone-avoir-780.webp 780w" sizes="320px" width="780" height="1440">
+          <source type="image/avif" srcset="/img/en/accueil-ordinateur-1200.avif 1200w, /img/en/accueil-ordinateur-1800.avif 1800w, /img/en/accueil-ordinateur-2400.avif 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800">
+          <img src="/img/en/accueil-ordinateur-1200.webp" srcset="/img/en/accueil-ordinateur-1200.webp 1200w, /img/en/accueil-ordinateur-1800.webp 1800w, /img/en/accueil-ordinateur-2400.webp 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2880" height="1800" fetchpriority="high" alt="Mirinu's home screen: the next episode of each show with a circle to tick it off. On a computer, Black Clover shown large with the Mark as watched and Open title page buttons, the Up next list below and, on the right, an idea for tonight and upcoming releases with the Calendar link.">
         </picture>
       </figure>
     </section>
@@ -263,12 +290,12 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       </div>
       <div class="paire">
         <picture class="doublon">
-          <source type="image/avif" srcset="/img/telephone-avoir-390.avif 390w, /img/telephone-avoir-780.avif 780w" sizes="(min-width: 960px) 300px, 45vw">
-          <img class="ecran ecran-tel" src="/img/telephone-avoir-390.webp" srcset="/img/telephone-avoir-390.webp 390w, /img/telephone-avoir-780.webp 780w" sizes="(min-width: 960px) 300px, 45vw" width="780" height="1440" loading="lazy" decoding="async" alt="The Up next list on a phone, in French: Slow Horses season 4 episode 3, One Piece chapter 1101 with 95 chapters to catch up on, Silo, Berserk and The Bear, each with a circle to tick off.">
+          <source type="image/avif" srcset="/img/en/telephone-avoir-390.avif 390w, /img/en/telephone-avoir-780.avif 780w" sizes="(min-width: 960px) 300px, 45vw">
+          <img class="ecran ecran-tel" src="/img/en/telephone-avoir-390.webp" srcset="/img/en/telephone-avoir-390.webp 390w, /img/en/telephone-avoir-780.webp 780w" sizes="(min-width: 960px) 300px, 45vw" width="780" height="1440" loading="lazy" decoding="async" alt="The Up next list on a phone: Black Clover season 2 episode 5, JoJo's Bizarre Adventure season 6 episode 7, MobLand season 2 episode 7, The Apothecary Diaries season 1 episode 51 with 2 more episodes, and Tulsa King, each with a circle to tick off and a New label.">
         </picture>
         <picture>
-          <source type="image/avif" srcset="/img/telephone-fiche-390.avif 390w, /img/telephone-fiche-780.avif 780w" sizes="(min-width: 960px) 300px, (min-width: 720px) 45vw, 300px">
-          <img class="ecran ecran-tel tel" src="/img/telephone-fiche-390.webp" srcset="/img/telephone-fiche-390.webp 390w, /img/telephone-fiche-780.webp 780w" sizes="(min-width: 960px) 300px, (min-width: 720px) 45vw, 300px" width="780" height="1440" loading="lazy" decoding="async" alt="The Severance page on a phone, in French: 15 of 19 episodes watched, and the line “At your pace, you'll catch up with the latest episode around November 3”, then the list of seasons.">
+          <source type="image/avif" srcset="/img/en/telephone-fiche-390.avif 390w, /img/en/telephone-fiche-780.avif 780w" sizes="(min-width: 960px) 300px, (min-width: 720px) 45vw, 300px">
+          <img class="ecran ecran-tel tel" src="/img/en/telephone-fiche-390.webp" srcset="/img/en/telephone-fiche-390.webp 390w, /img/en/telephone-fiche-780.webp 780w" sizes="(min-width: 960px) 300px, (min-width: 720px) 45vw, 300px" width="780" height="1440" loading="lazy" decoding="async" alt="The Severance page on a phone: 15 of 19 episodes watched, and the line “At your pace, you'll catch up with the latest episode around November 6”, then the list of seasons.">
         </picture>
       </div>
     </section>
@@ -294,10 +321,10 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       <div class="large">
         <figure>
           <picture>
-            <source media="(max-width: 719px)" type="image/avif" srcset="/img/telephone-bibliotheque-390.avif 390w, /img/telephone-bibliotheque-780.avif 780w" sizes="300px" width="780" height="1160">
-            <source media="(max-width: 719px)" type="image/webp" srcset="/img/telephone-bibliotheque-390.webp 390w, /img/telephone-bibliotheque-780.webp 780w" sizes="300px" width="780" height="1160">
-            <source type="image/avif" srcset="/img/bibliotheque-1000.avif 1000w, /img/bibliotheque-1600.avif 1600w, /img/bibliotheque-2392.avif 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472">
-            <img class="ecran" src="/img/bibliotheque-1000.webp" srcset="/img/bibliotheque-1000.webp 1000w, /img/bibliotheque-1600.webp 1600w, /img/bibliotheque-2392.webp 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472" loading="lazy" decoding="async" alt="The library on a computer, in French, 50 titles: on the left, filters by type (shows, movies, anime, manga, novels) and by status with their counts; on the right, the posters of The Office, Severance, Dan Da Dan, Frieren, Silo, Whiplash, Past Lives, Solo Leveling, The Bear and Vinland Saga, with the progress under each.">
+            <source media="(max-width: 719px)" type="image/avif" srcset="/img/en/telephone-bibliotheque-390.avif 390w, /img/en/telephone-bibliotheque-780.avif 780w" sizes="300px" width="780" height="1160">
+            <source media="(max-width: 719px)" type="image/webp" srcset="/img/en/telephone-bibliotheque-390.webp 390w, /img/en/telephone-bibliotheque-780.webp 780w" sizes="300px" width="780" height="1160">
+            <source type="image/avif" srcset="/img/en/bibliotheque-1000.avif 1000w, /img/en/bibliotheque-1600.avif 1600w, /img/en/bibliotheque-2392.avif 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472">
+            <img class="ecran" src="/img/en/bibliotheque-1000.webp" srcset="/img/en/bibliotheque-1000.webp 1000w, /img/en/bibliotheque-1600.webp 1600w, /img/en/bibliotheque-2392.webp 2392w" sizes="(min-width: 1264px) 1136px, calc(100vw - 64px)" width="2392" height="1472" loading="lazy" decoding="async" alt="The library, 66 titles. On a computer, filters on the left by type (shows, movies, anime, manga, light novels, comics, novels) and by status with their counts; on the right, the posters of Dragon Ball Super, The Office, Godzilla Minus Zero, Severance, Dan Da Dan, The Hunger Games, Frieren, Mushoku Tensei, Silo and Black Clover, with the progress under each.">
           </picture>
         </figure>
       </div>
@@ -311,8 +338,8 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       </div>
       <figure class="tel-seul">
         <picture>
-          <source type="image/avif" srcset="/img/telephone-annee-390.avif 390w, /img/telephone-annee-780.avif 780w" sizes="300px">
-          <img class="ecran ecran-tel tel" src="/img/telephone-annee-390.webp" srcset="/img/telephone-annee-390.webp 390w, /img/telephone-annee-780.webp 780w" sizes="300px" width="780" height="1340" loading="lazy" decoding="async" alt="The 2026 year screen on a phone, in French: 12 days and 23 hours watched, 29 titles, 420 episodes, 9 movies and 654 chapters, then the most-watched shows, with The Office first.">
+          <source type="image/avif" srcset="/img/en/telephone-annee-390.avif 390w, /img/en/telephone-annee-780.avif 780w" sizes="300px">
+          <img class="ecran ecran-tel tel" src="/img/en/telephone-annee-390.webp" srcset="/img/en/telephone-annee-390.webp 390w, /img/en/telephone-annee-780.webp 780w" sizes="300px" width="780" height="1340" loading="lazy" decoding="async" alt="The My 2026 screen on a phone: 21 days and 15 hours watched, 40 titles, 895 episodes, 9 movies, 654 manga chapters, 160 light novel chapters, 3 comic albums and 1 novel, then the most watched shows, with The Office first.">
         </picture>
       </figure>
     </section>
@@ -326,8 +353,8 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
       </div>
       <figure class="tel-seul synchro">
         <picture>
-          <source type="image/avif" srcset="/img/telephone-synchro-390.avif 390w, /img/telephone-synchro-780.avif 780w" sizes="360px">
-          <img class="ecran ecran-tel" src="/img/telephone-synchro-390.webp" srcset="/img/telephone-synchro-390.webp 390w, /img/telephone-synchro-780.webp 780w" sizes="360px" width="780" height="860" loading="lazy" decoding="async" alt="The Sync screen on a phone, in French: “Show a code” to link this device to your library, “I have a code” to send it to another device.">
+          <source type="image/avif" srcset="/img/en/telephone-synchro-390.avif 390w, /img/en/telephone-synchro-780.avif 780w" sizes="360px">
+          <img class="ecran ecran-tel" src="/img/en/telephone-synchro-390.webp" srcset="/img/en/telephone-synchro-390.webp 390w, /img/en/telephone-synchro-780.webp 780w" sizes="360px" width="780" height="860" loading="lazy" decoding="async" alt="The Sync screen on a phone: “Show a code” to link this device to your library, “I have a code” to send it to another device.">
         </picture>
       </figure>
     </section>
@@ -396,9 +423,14 @@ figcaption{margin-top:12px;color:var(--gris);font-size:.875rem;line-height:1.5}
         <a href="https://www.themoviedb.org/" aria-label="TMDB"><img src="/img/tmdb.svg" width="120" height="16" alt="TMDB" loading="lazy"></a>
         <p>Mirinu uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
       </div>
-      <p class="vo">Manga and light novels: MangaUpdates. The screenshots show a demo library, in the French version of the app.</p>
+      <p class="vo">Manga and light novels: MangaUpdates. The screenshots show a demo library.</p>
     </div>
   </footer>
 </div>
+<script>
+(function(){var d=document.querySelector(".langues details");if(!d)return;
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&d.open){d.open=false;d.querySelector("summary").focus()}});
+d.addEventListener("focusout",function(e){if(d.open&&e.relatedTarget&&!d.contains(e.relatedTarget))d.open=false})})();
+</script>
 </body>
 </html>
