@@ -1,6 +1,6 @@
 # Mirinu
 
-> Mirinu est une app gratuite pour suivre séries, films, animés, mangas, light novels et BD, sur le web (https://app.mirinu.ch/) et bientôt sur Android. Elle marche sans compte : la bibliothèque reste sur l'appareil de la personne. Un compte facultatif (Google ou code par mail) en garde une copie chiffrée de bout en bout, que Mirinu ne peut pas lire. Projet personnel de Marco, fait en Suisse.
+> Mirinu est une app gratuite pour suivre séries, films, animés, mangas, light novels, BD et romans, sur le web (https://app.mirinu.ch/) et bientôt sur Android. Elle marche sans compte : la bibliothèque reste sur l'appareil de la personne. Un compte facultatif (Google ou code par mail) en garde une copie chiffrée de bout en bout, que Mirinu ne peut pas lire. Projet personnel de Marco, fait en Suisse.
 
 ## Ce que fait l'app
 
