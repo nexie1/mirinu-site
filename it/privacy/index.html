@@ -68,7 +68,7 @@
 
       <section aria-labelledby="synchro">
         <h2 id="synchro">Sincronizzazione e sicurezza</h2>
-        <p>Se colleghi più dispositivi, la tua libreria viene cifrata sul tuo dispositivo prima di essere inviata al relay. Il relay conserva solo dati che non può leggere, e la chiave non vi passa mai in chiaro.</p>
+        <p>Se colleghi più dispositivi, la tua libreria viene cifrata sul tuo dispositivo prima di essere inviata al relay. Il relay conserva solo dati che non può leggere, e la chiave non vi passa mai in chiaro. Se il relay lo chiede prima di creare una sincronizzazione, si carica un controllo anti-bot di Cloudflare (Turnstile): legge il tuo indirizzo IP e alcune informazioni sul tuo browser.</p>
         <p>Se trovi una falla, scrivi a <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> prima di renderla pubblica.</p>
       </section>
 
@@ -88,8 +88,8 @@
 
       <section aria-labelledby="bases">
         <h2 id="bases">Basi giuridiche e durate</h2>
-        <p>Mirinu segue la legge svizzera sulla protezione dei dati e, per le persone nell'UE, il GDPR. La sincronizzazione e la visualizzazione delle schede servono al servizio che chiedi (art.&nbsp;6, par. 1, lett. b GDPR). Le corrispondenze e l'hosting si basano sul legittimo interesse a far funzionare il servizio (lett. f).</p>
-        <p>Mirinu non conserva il tuo indirizzo IP. Il relay cancella una copia sincronizzata 180&nbsp;giorni dopo la sua ultima sincronizzazione. Un'e-mail che invii viene conservata il tempo di trattare la tua richiesta.</p>
+        <p>Mirinu segue la legge svizzera sulla protezione dei dati e, per le persone nell'UE, il GDPR. La sincronizzazione e la visualizzazione delle schede servono al servizio che chiedi (art. 6, par. 1, lett. b GDPR). Le corrispondenze e l'hosting si basano sul legittimo interesse a far funzionare il servizio (lett. f). Il controllo anti-bot e il conteggio per indirizzo si basano sullo stesso legittimo interesse: proteggere il servizio dagli abusi.</p>
+        <p>Mirinu non conserva il tuo indirizzo IP: per frenare gli abusi, il relay conta le richieste per indirizzo, in una forma illeggibile cancellata il giorno dopo. Cancella una copia sincronizzata 180 giorni dopo la sua ultima sincronizzazione, e uno spazio rimasto vuoto dopo un giorno. I backup automatici di Cloudflare conservano ciò che viene cancellato per un massimo di altri 7 giorni. Un'e-mail che invii viene conservata il tempo di trattare la tua richiesta.</p>
       </section>
 
       <section aria-labelledby="droits">

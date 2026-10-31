@@ -67,7 +67,7 @@
 
       <section aria-labelledby="synchro">
         <h2 id="synchro">Synchronisation et sécurité</h2>
-        <p>Si tu relies plusieurs appareils, ta bibliothèque est chiffrée sur ton appareil avant d'être envoyée au relais. Le relais ne garde que des données qu'il ne peut pas lire, et la clé n'y passe jamais en clair.</p>
+        <p>Si tu relies plusieurs appareils, ta bibliothèque est chiffrée sur ton appareil avant d'être envoyée au relais. Le relais ne garde que des données qu'il ne peut pas lire, et la clé n'y passe jamais en clair. Si le relais le demande avant de créer une synchro, un contrôle anti-robots de Cloudflare (Turnstile) se charge alors&nbsp;: il lit ton adresse IP et des informations sur ton navigateur.</p>
         <p>Si tu trouves une faille, écris à <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> avant de la rendre publique.</p>
       </section>
 
@@ -87,8 +87,8 @@
 
       <section aria-labelledby="bases">
         <h2 id="bases">Bases légales et durées</h2>
-        <p>Mirinu suit la loi suisse sur la protection des données et, pour les personnes dans l'UE, le RGPD. La synchro et l'affichage des fiches servent le service que tu demandes (art.&nbsp;6, par.&nbsp;1, let.&nbsp;b RGPD). Les correspondances et l'hébergement reposent sur l'intérêt légitime à faire marcher le service (let.&nbsp;f).</p>
-        <p>Mirinu ne garde pas ton adresse IP. Le relais efface une copie synchronisée 180&nbsp;jours après sa dernière synchro. Un mail que tu envoies est gardé le temps de traiter ta demande.</p>
+        <p>Mirinu suit la loi suisse sur la protection des données et, pour les personnes dans l'UE, le RGPD. La synchro et l'affichage des fiches servent le service que tu demandes (art. 6, par. 1, let. b RGPD). Les correspondances et l'hébergement reposent sur l'intérêt légitime à faire marcher le service (let. f). Le contrôle anti-robots et le comptage par adresse reposent sur le même intérêt légitime&nbsp;: protéger le service contre les abus.</p>
+        <p>Mirinu ne garde pas ton adresse IP&nbsp;: pour freiner les abus, le relais compte les demandes par adresse, sous une forme illisible effacée le lendemain. Il efface une copie synchronisée 180 jours après sa dernière synchro, et un espace resté vide après un jour. Les sauvegardes automatiques de Cloudflare gardent ce qui est effacé jusqu'à 7 jours de plus. Un mail que tu envoies est gardé le temps de traiter ta demande.</p>
       </section>
 
       <section aria-labelledby="droits">
