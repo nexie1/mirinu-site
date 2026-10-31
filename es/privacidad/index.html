@@ -68,7 +68,7 @@
 
       <section aria-labelledby="synchro">
         <h2 id="synchro">Sincronización y seguridad</h2>
-        <p>Si vinculas varios dispositivos, tu biblioteca se cifra en tu dispositivo antes de enviarse al servidor intermediario. Este solo guarda datos que no puede leer, y la clave nunca pasa por él en claro.</p>
+        <p>Si vinculas varios dispositivos, tu biblioteca se cifra en tu dispositivo antes de enviarse al servidor intermediario. Este solo guarda datos que no puede leer, y la clave nunca pasa por él en claro. Si el servidor intermediario lo pide antes de crear una sincronización, se carga un control antibots de Cloudflare (Turnstile): lee tu dirección IP e información sobre tu navegador.</p>
         <p>Si encuentras un fallo de seguridad, escribe a <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> antes de hacerlo público.</p>
       </section>
 
@@ -79,8 +79,8 @@
 
       <section aria-labelledby="bases">
         <h2 id="bases">Bases jurídicas y plazos</h2>
-        <p>Mirinu sigue la ley suiza de protección de datos y, para las personas en la UE, el RGPD. La sincronización y la visualización de las fichas sirven al servicio que pides (art.&nbsp;6.1.b RGPD). Las correspondencias y el alojamiento se basan en el interés legítimo en hacer funcionar el servicio (art.&nbsp;6.1.f).</p>
-        <p>Mirinu no guarda tu dirección IP. El servidor intermediario borra una copia sincronizada 180&nbsp;días después de su última sincronización. Un correo que envías se guarda el tiempo necesario para tramitar tu solicitud.</p>
+        <p>Mirinu sigue la ley suiza de protección de datos y, para las personas en la UE, el RGPD. La sincronización y la visualización de las fichas sirven al servicio que pides (art. 6.1.b RGPD). Las correspondencias y el alojamiento se basan en el interés legítimo en hacer funcionar el servicio (art. 6.1.f). El control antibots y el recuento por dirección se basan en el mismo interés legítimo: proteger el servicio contra los abusos.</p>
+        <p>Mirinu no guarda tu dirección IP: para frenar los abusos, el servidor intermediario cuenta las solicitudes por dirección, de forma ilegible y borrada al día siguiente. Borra una copia sincronizada 180 días después de su última sincronización, y un espacio que sigue vacío después de un día. Las copias de seguridad automáticas de Cloudflare guardan lo borrado hasta 7 días más. Un correo que envías se guarda el tiempo necesario para tramitar tu solicitud.</p>
       </section>
 
       <section aria-labelledby="droits">

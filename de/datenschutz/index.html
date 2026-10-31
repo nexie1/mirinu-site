@@ -68,7 +68,7 @@
 
       <section aria-labelledby="synchro">
         <h2 id="synchro">Synchronisierung und Sicherheit</h2>
-        <p>Wenn du mehrere Geräte verbindest, wird deine Bibliothek auf deinem Gerät verschlüsselt, bevor sie an den Relay-Server geht. Der Relay-Server speichert nur Daten, die er nicht lesen kann, und der Schlüssel geht nie im Klartext über ihn.</p>
+        <p>Wenn du mehrere Geräte verbindest, wird deine Bibliothek auf deinem Gerät verschlüsselt, bevor sie an den Relay-Server geht. Der Relay-Server speichert nur Daten, die er nicht lesen kann, und der Schlüssel geht nie im Klartext über ihn. Wenn der Relay-Server es vor dem Einrichten einer Synchronisierung verlangt, wird eine Bot-Prüfung von Cloudflare (Turnstile) geladen: Sie liest deine IP-Adresse und Angaben zu deinem Browser.</p>
         <p>Wenn du eine Sicherheitslücke findest, schreib an <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>, bevor du sie veröffentlichst.</p>
       </section>
 
@@ -79,8 +79,8 @@
 
       <section aria-labelledby="bases">
         <h2 id="bases">Rechtsgrundlagen und Speicherdauer</h2>
-        <p>Mirinu hält sich an das Schweizer Datenschutzgesetz und, für Personen in der EU, an die DSGVO. Die Synchronisierung und die Anzeige der Titel dienen dem Dienst, den du anforderst (Art.&nbsp;6 Abs. 1 lit. b DSGVO). Die Zuordnungen und das Hosting beruhen auf dem berechtigten Interesse, den Dienst zu betreiben (lit. f).</p>
-        <p>Mirinu speichert deine IP-Adresse nicht. Der Relay-Server löscht eine synchronisierte Kopie 180&nbsp;Tage nach ihrer letzten Synchronisierung. Eine E-Mail, die du schickst, wird aufbewahrt, bis deine Anfrage erledigt ist.</p>
+        <p>Mirinu hält sich an das Schweizer Datenschutzgesetz und, für Personen in der EU, an die DSGVO. Die Synchronisierung und die Anzeige der Titel dienen dem Dienst, den du anforderst (Art. 6 Abs. 1 lit. b DSGVO). Die Zuordnungen und das Hosting beruhen auf dem berechtigten Interesse, den Dienst zu betreiben (lit. f). Die Bot-Prüfung und die Zählung pro Adresse beruhen auf demselben berechtigten Interesse: den Dienst vor Missbrauch zu schützen.</p>
+        <p>Mirinu speichert deine IP-Adresse nicht: Gegen Missbrauch zählt der Relay-Server die Anfragen pro Adresse, in unlesbarer Form, die am nächsten Tag gelöscht wird. Er löscht eine synchronisierte Kopie 180 Tage nach ihrer letzten Synchronisierung und einen leer gebliebenen Bereich nach einem Tag. Die automatischen Sicherungen von Cloudflare behalten Gelöschtes bis zu 7 weitere Tage. Eine E-Mail, die du schickst, wird aufbewahrt, bis deine Anfrage erledigt ist.</p>
       </section>
 
       <section aria-labelledby="droits">

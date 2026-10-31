@@ -68,7 +68,7 @@
 
       <section aria-labelledby="synchro">
         <h2 id="synchro">Sync and security</h2>
-        <p>If you link several devices, your library is encrypted on your device before it is sent to the relay. The relay only keeps data it cannot read, and the key never goes through it in the clear.</p>
+        <p>If you link several devices, your library is encrypted on your device before it is sent to the relay. The relay only keeps data it cannot read, and the key never goes through it in the clear. If the relay asks for it before creating a sync, a Cloudflare anti-bot check (Turnstile) loads at that point: it reads your IP address and information about your browser.</p>
         <p>If you find a security flaw, write to <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> before making it public.</p>
       </section>
 
@@ -79,8 +79,8 @@
 
       <section aria-labelledby="bases">
         <h2 id="bases">Legal bases and retention</h2>
-        <p>Mirinu follows the Swiss data protection act and, for people in the EU, the GDPR. Sync and showing title pages serve the service you ask for (Art.&nbsp;6(1)(b) GDPR). Matching and hosting rest on the legitimate interest in running the service (Art.&nbsp;6(1)(f)).</p>
-        <p>Mirinu does not keep your IP address. The relay erases a synced copy 180&nbsp;days after its last sync. An email you send is kept while your request is handled.</p>
+        <p>Mirinu follows the Swiss data protection act and, for people in the EU, the GDPR. Sync and showing title pages serve the service you ask for (Art. 6(1)(b) GDPR). Matching and hosting rest on the legitimate interest in running the service (Art. 6(1)(f)). The anti-bot check and the per-address count rest on the same legitimate interest: protecting the service against abuse.</p>
+        <p>Mirinu does not keep your IP address: to curb abuse, the relay counts requests per address, in an unreadable form erased the next day. It erases a synced copy 180 days after its last sync, and a space left empty after one day. Cloudflare's automatic backups keep what is erased for up to 7 more days. An email you send is kept while your request is handled.</p>
       </section>
 
       <section aria-labelledby="droits">
