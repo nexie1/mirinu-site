@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  var API = 'https://api.mirinu.workers.dev/profile/';
+  var API = 'https://api.mirinu.ch/profile/';
   var IMG = 'https://image.tmdb.org/t/p/w185';
   // L'identifiant dérive du jeton (22 caractères base64url, proxy/profile.js).
   var ID = /^[A-Za-z0-9_-]{22}$/;

@@ -80,13 +80,13 @@
 
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Providers and countries</h2>
-        <p>Cloudflare (United States, servers in several countries) runs the relay. On the website, manga and light novel searches and pages also go through Vercel (United States), without your IP address or anything that identifies you. GitHub (United States) hosts mirinu.ch and app.mirinu.ch, and keeps its own access logs. Infomaniak (Switzerland) hosts the contact@mirinu.ch mailbox. Cloudflare, Vercel and GitHub take part in the Data Privacy Framework, which Switzerland and the EU recognize for data sent to the United States.</p>
+        <p>The relay runs on a server rented from Infomaniak (Switzerland), which also hosts the contact@mirinu.ch mailbox. App versions up to 0.54 still go through Cloudflare (United States, servers in several countries), which passes each request on to the relay. GitHub (United States) hosts mirinu.ch and app.mirinu.ch, and keeps its own access logs. Cloudflare and GitHub take part in the Data Privacy Framework, which Switzerland and the EU recognize for data sent to the United States.</p>
       </section>
 
       <section aria-labelledby="bases">
         <h2 id="bases">Legal bases and retention</h2>
         <p>Mirinu follows the Swiss data protection act and, for people in the EU, the GDPR. Sync and showing title pages serve the service you ask for (Art. 6(1)(b) GDPR). Matching and hosting rest on the legitimate interest in running the service (Art. 6(1)(f)). The anti-bot check and the per-address count rest on the same legitimate interest: protecting the service against abuse.</p>
-        <p>Mirinu does not keep your IP address: to curb abuse, the relay counts requests per address, in an unreadable form erased the next day. It erases a synced copy 180 days after its last sync, and a space left empty after one day. Cloudflare's automatic backups keep what is erased for up to 7 more days. An email you send is kept while your request is handled.</p>
+        <p>Mirinu does not keep your IP address: to curb abuse, the relay counts requests per address, in an unreadable form erased the next day. It erases a synced copy 180 days after its last sync, and a space left empty after one day. The relay's nightly backups keep what is erased for up to 7 more days. An email you send is kept while your request is handled.</p>
       </section>
 
       <section aria-labelledby="droits">
