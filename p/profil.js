@@ -8,7 +8,8 @@
 
   var API = 'https://api.mirinu.workers.dev/profile/';
   var IMG = 'https://image.tmdb.org/t/p/w185';
-  var ID = /^[A-Za-z0-9_-]{22,43}$/;
+  // L'identifiant dérive du jeton (22 caractères base64url, proxy/profile.js).
+  var ID = /^[A-Za-z0-9_-]{22}$/;
   // Un chemin d'affiche de TMDB, rien d'autre : l'adresse de l'image est
   // toujours construite ici, jamais reprise du profil.
   var POSTER = /^\/[A-Za-z0-9_-]{1,64}\.(?:jpg|png|webp)$/;
@@ -20,6 +21,7 @@
 
   var T = {
     fr: {
+      notice: 'Profil créé par une personne qui utilise Mirinu. Mirinu n’en vérifie pas le contenu.',
       skip: 'Aller au contenu', openApp: "Ouvrir l'app", loading: 'Chargement du profil…',
       fallbackName: 'Profil Mirinu', readOnly: 'Profil en lecture seule', updated: 'mis à jour le {d}',
       gone: "Ce profil n'est plus partagé.",
@@ -39,6 +41,7 @@
       tmdb: 'Mirinu utilise TMDB et ses API sans être approuvé ni certifié par TMDB.',
     },
     en: {
+      notice: 'Profile created by someone who uses Mirinu. Mirinu does not check its content.',
       skip: 'Skip to content', openApp: 'Open the app', loading: 'Loading the profile…',
       fallbackName: 'Mirinu profile', readOnly: 'Read-only profile', updated: 'updated {d}',
       gone: 'This profile is no longer shared.',
@@ -58,6 +61,7 @@
       tmdb: '',
     },
     de: {
+      notice: 'Profil erstellt von einer Person, die Mirinu nutzt. Mirinu prüft den Inhalt nicht.',
       skip: 'Zum Inhalt', openApp: 'App öffnen', loading: 'Profil wird geladen…',
       fallbackName: 'Mirinu-Profil', readOnly: 'Profil nur zum Lesen', updated: 'aktualisiert am {d}',
       gone: 'Dieses Profil wird nicht mehr geteilt.',
@@ -77,6 +81,7 @@
       tmdb: 'Mirinu nutzt TMDB und seine APIs, ohne von TMDB unterstützt oder zertifiziert zu sein.',
     },
     it: {
+      notice: 'Profilo creato da una persona che usa Mirinu. Mirinu non ne verifica il contenuto.',
       skip: 'Vai al contenuto', openApp: "Apri l'app", loading: 'Caricamento del profilo…',
       fallbackName: 'Profilo Mirinu', readOnly: 'Profilo in sola lettura', updated: 'aggiornato {d}',
       gone: 'Questo profilo non è più condiviso.',
@@ -96,6 +101,7 @@
       tmdb: 'Mirinu usa TMDB e le sue API senza essere approvato né certificato da TMDB.',
     },
     es: {
+      notice: 'Perfil creado por una persona que usa Mirinu. Mirinu no verifica su contenido.',
       skip: 'Ir al contenido', openApp: 'Abrir la app', loading: 'Cargando el perfil…',
       fallbackName: 'Perfil de Mirinu', readOnly: 'Perfil de solo lectura', updated: 'actualizado el {d}',
       gone: 'Este perfil ya no se comparte.',
@@ -339,6 +345,7 @@
     state.profile = null;
     state.type = null;
     state.open = {};
+    document.getElementById('avis').hidden = true;
     if (!ID.test(id)) {
       setHeader(t.fallbackName, '');
       message([t.gone, t.goneHint]);
@@ -368,6 +375,7 @@
         state.profile = p;
         var name = typeof p.name === 'string' && p.name.trim() ? p.name.trim() : t.fallbackName;
         setHeader(name, updatedText(p.updated));
+        document.getElementById('avis').hidden = false;
         render();
       })
       .catch(function () {

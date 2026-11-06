@@ -2,6 +2,7 @@
    juridique.css (chargé avant) ; une grille d'affiches qui tient sur un
    téléphone de 320 px. */
 .entete h1{overflow-wrap:anywhere}
+.avis{margin-top:12px;padding-left:12px;border-left:2px solid var(--trait);color:var(--gris);font-size:.875rem;max-width:40rem}
 .etat{margin-top:24px;max-width:40rem}
 .etat+.etat{margin-top:8px;color:var(--gris)}
 .bouton-plein{display:inline-flex;align-items:center;min-height:44px;margin-top:16px;padding:8px 18px;border:0;border-radius:999px;background:var(--violet-fond);color:#fff;font:inherit;font-weight:600;cursor:pointer}
