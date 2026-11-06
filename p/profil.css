@@ -1,0 +1,43 @@
+/* Profil public (p/index.html). Mêmes jetons, polices et en-tête que
+   juridique.css (chargé avant) ; une grille d'affiches qui tient sur un
+   téléphone de 320 px. */
+.entete h1{overflow-wrap:anywhere}
+.etat{margin-top:24px;max-width:40rem}
+.etat+.etat{margin-top:8px;color:var(--gris)}
+.bouton-plein{display:inline-flex;align-items:center;min-height:44px;margin-top:16px;padding:8px 18px;border:0;border-radius:999px;background:var(--violet-fond);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.bouton-plein:hover{background:var(--violet-survol)}
+
+/* Chiffres */
+.chiffres{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px;max-width:56rem}
+.chiffres li{background:var(--ardoise);border:1px solid var(--trait);border-radius:12px;padding:12px 14px}
+.chiffres strong{display:block;font-family:var(--titre);font-size:1.5rem;line-height:1.1;letter-spacing:-.01em}
+.chiffres span{color:var(--gris);font-size:.875rem}
+
+/* Types */
+.onglets{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.onglets button{min-height:40px;padding:6px 14px;border:1px solid var(--trait);border-radius:999px;background:transparent;color:var(--texte-2);font:inherit;font-size:.9375rem;cursor:pointer}
+.onglets button:hover{border-color:var(--violet);color:var(--texte)}
+.onglets button[aria-pressed="true"]{background:var(--carte);border-color:var(--violet);color:var(--texte);font-weight:600}
+.onglets .n{color:var(--gris);font-weight:400;margin-left:6px}
+
+/* Titres, par statut */
+.statut{margin-top:32px;border-top:1px solid var(--trait);padding-top:18px}
+.statut h2 .n{color:var(--gris);font-family:var(--corps);font-weight:400;font-size:1rem;margin-left:8px}
+.grille{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:16px 12px}
+@media (min-width:720px){.grille{grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:20px 16px}}
+.titre{min-width:0}
+.affiche{position:relative;aspect-ratio:2/3;border-radius:8px;overflow:hidden;background:var(--carte);border:1px solid var(--trait)}
+.affiche img{display:block;width:100%;height:100%;object-fit:cover}
+.affiche .vide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;color:var(--gris);font-size:.8125rem;line-height:1.3;overflow-wrap:anywhere}
+.badges{position:absolute;left:6px;right:6px;bottom:6px;display:flex;gap:4px;justify-content:space-between;align-items:flex-end;pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:999px;background:#0B0E13d9;color:var(--texte);font-size:.75rem;font-weight:600;line-height:1.5}
+.badge svg{width:11px;height:11px;fill:#F47B9E}
+.titre .nom{margin-top:8px;color:var(--texte);font-size:.875rem;line-height:1.3;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.titre .annee{color:var(--gris);font-size:.8125rem}
+.plus{margin-top:14px;min-height:44px;padding:6px 16px;border:1px solid var(--trait);border-radius:999px;background:transparent;color:var(--texte);font:inherit;font-weight:600;cursor:pointer}
+.plus:hover{border-color:var(--violet)}
+
+/* Pied */
+.pied .tmdb{display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px;margin-top:8px}
+.pied .tmdb svg{display:block;width:120px;height:auto}
+.pied .tmdb p{margin:0}
