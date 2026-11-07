@@ -78,9 +78,16 @@
         <p>This sharing rests on your consent (Art. 6(1)(a) GDPR). Stopping it withdraws that consent: the app erases the page from the relay as soon as it reaches it, and keeps trying while offline; someone who opened it may keep it for up to a minute in their browser. A page the app has not updated for 180 days is erased. The relay then keeps a fingerprint of the link, and nothing else, for 2 years so it cannot be used again.</p>
       </section>
 
+      <section aria-labelledby="affiches">
+        <h2 id="affiches">Posters you suggest</h2>
+        <p>You can suggest a poster for a movie, a show or a manga, with or without an account. The app shrinks the image on your device and sends it to the relay, which redraws it as two WebP images without metadata. Nobody sees it before it has been checked; once accepted, it shows for everyone. The relay keeps the image, the title it is for, the day it was sent and the state of the poster. An image waiting with no decision is erased after 60 days.</p>
+        <p>For a report, the relay keeps the day and a salted fingerprint of the block of network addresses it came from, for 30 days at most. For a refused image, it keeps a fingerprint of its pixels for 90 days. For an image removed for good, it keeps two fingerprints of the image and the title with no time limit, so that it does not come back. The relay's backups, which last 7 days, contain the posters.</p>
+        <p>The relay never keeps your IP address, your country, the bot check token, your device or your account. It works out your country from your IP address when you send, without keeping it, to refuse sends from Russia, using <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, license CC BY 4.0). The bot check is Turnstile, by Cloudflare: it reads your IP address and information about your browser.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Providers and countries</h2>
-        <p>The relay runs on a server rented from Infomaniak (Switzerland), which also hosts the contact@mirinu.ch mailbox. App versions up to 0.54 still go through Cloudflare (United States, servers in several countries), which passes each request on to the relay. The same server serves mirinu.ch and app.mirinu.ch, without keeping a log of visits. Cloudflare takes part in the Data Privacy Framework, which Switzerland and the EU recognize for data sent to the United States.</p>
+        <p>The relay runs on a server rented from Infomaniak (Switzerland), which also hosts the contact@mirinu.ch mailbox. The same server serves mirinu.ch and app.mirinu.ch, without keeping a log of visits. Cloudflare (United States) is used only for the Turnstile bot check. Cloudflare takes part in the Data Privacy Framework, which Switzerland and the EU recognize for data sent to the United States.</p>
       </section>
 
       <section aria-labelledby="bases">

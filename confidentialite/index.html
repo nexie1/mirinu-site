@@ -77,9 +77,16 @@
         <p>Ce partage repose sur ton consentement (art. 6, par. 1, let. a RGPD). Arrêter le partage le retire&nbsp;: l'app efface la page du relais dès qu'elle le joint, et réessaie tant qu'elle est hors ligne&nbsp;; une personne qui l'a ouverte peut la garder jusqu'à une minute dans son navigateur. Une page que l'app n'a pas mise à jour depuis 180 jours est effacée. Le relais garde ensuite 2 ans une empreinte du lien, sans rien d'autre, pour qu'il ne serve plus.</p>
       </section>
 
+      <section aria-labelledby="affiches">
+        <h2 id="affiches">Les affiches que tu proposes</h2>
+        <p>Tu peux proposer une affiche pour un film, une série ou un manga, avec ou sans compte. L'app réduit l'image sur ton appareil et l'envoie au relais, qui la redessine en deux images WebP sans métadonnées. Personne ne la voit avant qu'elle ait été vérifiée&nbsp;; une fois acceptée, elle s'affiche pour tout le monde. Le relais garde l'image, la fiche visée, le jour de l'envoi et l'état de l'affiche. Une image en attente sans décision est effacée après 60 jours.</p>
+        <p>Pour un signalement, le relais garde le jour et une empreinte salée du bloc d'adresses réseau d'où il vient, 30 jours au plus. Pour une image refusée, il garde pendant 90 jours l'empreinte de ses pixels. Pour une image retirée pour toujours, il garde sans limite de durée deux empreintes de l'image et la fiche, pour qu'elle ne revienne pas. Les sauvegardes du relais, qui durent 7 jours, contiennent les affiches.</p>
+        <p>Le relais ne garde jamais ton adresse IP, ton pays, le jeton du test anti-robot, ton appareil ni ton compte. Il déduit ton pays de ton adresse IP au moment de l'envoi, sans le garder, pour refuser les envois de Russie, avec la base <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, licence CC BY 4.0). Le test anti-robot est Turnstile, de Cloudflare&nbsp;: il lit ton adresse IP et des informations sur ton navigateur.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Prestataires et pays</h2>
-        <p>Le relais tourne sur un serveur loué chez Infomaniak (Suisse), qui héberge aussi la boîte contact@mirinu.ch. Les versions de l'app jusqu'à la 0.54 passent encore par Cloudflare (États-Unis, serveurs dans plusieurs pays), qui transmet chaque demande au relais. Le même serveur sert mirinu.ch et app.mirinu.ch, sans garder de journal des visites. Cloudflare adhère au Data Privacy Framework, que la Suisse et l'UE reconnaissent pour les données envoyées aux États-Unis.</p>
+        <p>Le relais tourne sur un serveur loué chez Infomaniak (Suisse), qui héberge aussi la boîte contact@mirinu.ch. Le même serveur sert mirinu.ch et app.mirinu.ch, sans garder de journal des visites. Cloudflare (États-Unis) n'intervient que pour le test anti-robot Turnstile. Cloudflare adhère au Data Privacy Framework, que la Suisse et l'UE reconnaissent pour les données envoyées aux États-Unis.</p>
       </section>
 
       <section aria-labelledby="bases">

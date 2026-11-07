@@ -78,9 +78,16 @@
         <p>Compartir se basa en tu consentimiento (art. 6.1.a RGPD). Dejar de compartir lo retira: la app borra la página del servidor intermediario en cuanto lo alcanza, y lo reintenta mientras no tenga conexión; quien la haya abierto puede conservarla hasta un minuto en su navegador. Una página que la app no ha actualizado en 180 días se borra. El servidor guarda después durante 2 años una huella del enlace, y nada más, para que no vuelva a servir.</p>
       </section>
 
+      <section aria-labelledby="affiches">
+        <h2 id="affiches">Los pósteres que propones</h2>
+        <p>Puedes proponer un póster para una película, una serie o un manga, con o sin cuenta. La app reduce la imagen en tu dispositivo y la envía al servidor intermediario, que la vuelve a dibujar en dos imágenes WebP sin metadatos. Nadie la ve antes de que se haya comprobado; una vez aceptada, se muestra a todo el mundo. El servidor intermediario guarda la imagen, la ficha a la que va, el día del envío y el estado del póster. Una imagen en espera sin decisión se borra a los 60 días.</p>
+        <p>Para una denuncia, el servidor intermediario guarda el día y una huella con sal del bloque de direcciones de red de donde viene, 30 días como máximo. Para una imagen rechazada, guarda durante 90 días la huella de sus píxeles. Para una imagen retirada para siempre, guarda sin límite de duración dos huellas de la imagen y la ficha, para que no vuelva. Las copias de seguridad del servidor intermediario, que duran 7 días, contienen los pósteres.</p>
+        <p>El servidor intermediario nunca guarda tu dirección IP, tu país, el token del control antibots, tu dispositivo ni tu cuenta. Deduce tu país de tu dirección IP en el momento del envío, sin guardarlo, para rechazar los envíos desde Rusia, con <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, licencia CC BY 4.0). El control antibots es Turnstile, de Cloudflare: lee tu dirección IP e información sobre tu navegador.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Proveedores y países</h2>
-        <p>El servidor intermediario funciona en un servidor alquilado a Infomaniak (Suiza), que también aloja el buzón <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>. Las versiones de la app hasta la 0.54 pasan todavía por Cloudflare (Estados Unidos, servidores en varios países), que transmite cada solicitud al servidor intermediario. El mismo servidor sirve mirinu.ch y app.mirinu.ch, sin guardar un registro de las visitas. Cloudflare se adhiere al Data Privacy Framework, que Suiza y la UE reconocen para los datos enviados a Estados Unidos.</p>
+        <p>El servidor intermediario funciona en un servidor alquilado a Infomaniak (Suiza), que también aloja el buzón contact@mirinu.ch. El mismo servidor sirve mirinu.ch y app.mirinu.ch, sin guardar un registro de las visitas. Cloudflare (Estados Unidos) solo interviene en el control antibots Turnstile. Cloudflare se adhiere al Data Privacy Framework, que Suiza y la UE reconocen para los datos enviados a Estados Unidos.</p>
       </section>
 
       <section aria-labelledby="bases">

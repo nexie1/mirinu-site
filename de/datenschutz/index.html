@@ -78,9 +78,16 @@
         <p>Dieses Teilen beruht auf deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wenn du es beendest, widerrufst du sie: Die App löscht die Seite vom Relay-Server, sobald sie ihn erreicht, und versucht es weiter, solange sie offline ist; wer sie geöffnet hat, kann sie bis zu einer Minute im Browser behalten. Eine Seite, die die App 180 Tage lang nicht aktualisiert hat, wird gelöscht. Der Relay-Server behält danach 2 Jahre lang einen Fingerabdruck des Links, sonst nichts, damit er nicht wieder genutzt wird.</p>
       </section>
 
+      <section aria-labelledby="affiches">
+        <h2 id="affiches">Poster, die du vorschlägst</h2>
+        <p>Du kannst ein Poster für einen Film, eine Serie oder einen Manga vorschlagen, mit oder ohne Konto. Die App verkleinert das Bild auf deinem Gerät und schickt es an den Relay-Server, der es als zwei WebP-Bilder ohne Metadaten neu zeichnet. Niemand sieht es, bevor es geprüft wurde; nach der Annahme erscheint es für alle. Der Relay-Server speichert das Bild, den betroffenen Titel, den Tag des Sendens und den Zustand des Posters. Ein Bild, das ohne Entscheidung wartet, wird nach 60 Tagen gelöscht.</p>
+        <p>Bei einer Meldung speichert der Relay-Server den Tag und einen gesalzenen Fingerabdruck des Netzwerk-Adressblocks, von dem sie kommt, höchstens 30 Tage lang. Bei einem abgelehnten Bild speichert er 90 Tage lang den Fingerabdruck seiner Pixel. Bei einem für immer entfernten Bild speichert er ohne zeitliche Grenze zwei Fingerabdrücke des Bildes und den Titel, damit es nicht wiederkommt. Die Sicherungen des Relay-Servers, die 7 Tage dauern, enthalten die Poster.</p>
+        <p>Der Relay-Server speichert nie deine IP-Adresse, dein Land, das Token der Bot-Prüfung, dein Gerät oder dein Konto. Dein Land leitet er beim Senden aus deiner IP-Adresse ab, ohne es zu speichern, um Sendungen aus Russland abzulehnen; dafür nutzt er <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, Lizenz CC BY 4.0). Die Bot-Prüfung ist Turnstile von Cloudflare: Sie liest deine IP-Adresse und Angaben zu deinem Browser.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Dienstleister und Länder</h2>
-        <p>Der Relay-Server läuft auf einem bei Infomaniak (Schweiz) gemieteten Server; Infomaniak hostet auch das Postfach <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>. App-Versionen bis 0.54 laufen noch über Cloudflare (USA, Server in mehreren Ländern), das jede Anfrage an den Relay-Server weiterleitet. Derselbe Server stellt mirinu.ch und app.mirinu.ch bereit, ohne ein Protokoll der Besuche zu führen. Cloudflare nimmt am Data Privacy Framework teil, das die Schweiz und die EU für Daten anerkennen, die in die USA gehen.</p>
+        <p>Der Relay-Server läuft auf einem bei Infomaniak (Schweiz) gemieteten Server; Infomaniak hostet auch das Postfach contact@mirinu.ch. Derselbe Server stellt mirinu.ch und app.mirinu.ch bereit, ohne ein Protokoll der Besuche zu führen. Cloudflare (USA) kommt nur für die Bot-Prüfung Turnstile zum Einsatz. Cloudflare nimmt am Data Privacy Framework teil, das die Schweiz und die EU für Daten anerkennen, die in die USA gehen.</p>
       </section>
 
       <section aria-labelledby="bases">
