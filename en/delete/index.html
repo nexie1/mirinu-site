@@ -42,12 +42,12 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Delete your data</h1>
-      <p class="date">Updated on November 6, 2026.</p>
+      <p class="date">Updated on November 8, 2026.</p>
       <p class="foi">Translated from the <a href="/supprimer/" hreflang="fr">French version</a>, which prevails if the two differ.</p>
-      <p class="chapeau">Mirinu has no account. Your data is on your devices and, if you use sync, in an encrypted copy on the Mirinu relay.</p>
+      <p class="chapeau">Your data is on your devices and, if you use sync or an account, on the Mirinu relay: an encrypted copy of your library and, with an account, your email address, encrypted.</p>
     </div>
 
     <div class="rubriques">
@@ -64,15 +64,20 @@
       <section aria-labelledby="relais">
         <h2 id="relais">The sync copy</h2>
         <ol class="etapes">
-          <li>On each linked device, open Sync, in Profile on a phone or in Settings on a computer.</li>
+          <li>On each linked device, open Account and sync, in Profile on a phone or in Settings on a computer.</li>
           <li>Choose “Stop sync on this device”.</li>
         </ol>
-        <p>Once no device syncs anymore, the relay erases the encrypted copy after 180&nbsp;days. It cannot read it and does not know who it belongs to.</p>
+        <p>For a sync without an account, once no device syncs anymore, the relay erases the encrypted copy after 180&nbsp;days. It cannot read it and does not know who it belongs to.</p>
       </section>
 
       <section aria-labelledby="profil-public">
         <h2 id="profil-public">Your public profile</h2>
         <p>If you share your profile, stop sharing in the app (Share my profile, Stop sharing): the page is erased from the relay as soon as the app reaches it. Without the app, write to <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> with the link. Otherwise, it is erased 180 days after its last update.</p>
+      </section>
+
+      <section aria-labelledby="compte">
+        <h2 id="compte">Your account</h2>
+        <p>If you have an account, delete it in the app (Account and sync, Delete my account) or at <a href="https://app.mirinu.ch/#/supprimer">app.mirinu.ch/#/supprimer</a>, without installing the app. Your account, your email address and your encrypted library are erased from the relay 7&nbsp;days after your request; until then, you can cancel. From a linked device, “Delete right away” erases them without waiting. “Keep sync without an account” deletes the account and leaves sync between your devices. The relay's backups keep what is erased for up to 7 more days. What is on your devices stays there.</p>
       </section>
 
       <section aria-labelledby="question">

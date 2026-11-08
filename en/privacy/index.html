@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy, Mirinu</title>
-<meta name="description" content="What Mirinu does with your data: your library stays on your device, sync is encrypted, no account and no trackers.">
+<meta name="description" content="What Mirinu does with your data: your library stays on your device, sync is encrypted, the account is optional, no trackers.">
 <link rel="canonical" href="https://mirinu.ch/en/privacy/">
 <link rel="alternate" hreflang="fr" href="https://mirinu.ch/confidentialite/">
 <link rel="alternate" hreflang="en" href="https://mirinu.ch/en/privacy/">
@@ -42,10 +42,10 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Privacy</h1>
-      <p class="date">Updated on November 7, 2026.</p>
+      <p class="date">Updated on November 8, 2026.</p>
       <p class="foi">Translated from the <a href="/confidentialite/" hreflang="fr">French version</a>, which prevails if the two differ.</p>
       <p class="chapeau">Mirinu is a personal project by Marco, in Switzerland. He is responsible for the data described here. For any question: <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>.</p>
     </div>
@@ -53,7 +53,7 @@
     <div class="rubriques">
       <section aria-labelledby="appareil">
         <h2 id="appareil">On your device</h2>
-        <p>Mirinu has no account and asks for neither your name nor your email address. Your library, your ratings and your settings stay on your device: in the app on Android, in the browser's storage on app.mirinu.ch, without cookies. A file you import is read on the spot and sent nowhere.</p>
+        <p>The account is optional. Without an account, Mirinu asks for neither your name nor your email address. Your library, your ratings and your settings stay on your device: in the app on Android, in the browser's storage on app.mirinu.ch, without cookies. A file you import is read on the spot and sent nowhere.</p>
         <p>On Android, if your phone's Google backup is on, it may copy your library, as it does for your other apps.</p>
         <p>No ads, no trackers, no audience measurement.</p>
       </section>
@@ -85,15 +85,24 @@
         <p>The relay never keeps your IP address, your country, the bot check token, your device or your account. It works out your country from your IP address when you send, without keeping it, to refuse sends from Russia, using <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, license CC BY 4.0). The bot check is Turnstile, by Cloudflare: it reads your IP address and information about your browser.</p>
       </section>
 
+      <section aria-labelledby="compte">
+        <h2 id="compte">With an account</h2>
+        <p>The account is only for people aged 15 or over. It lets you get your library back if you lose your device, and manage your devices from any browser. Like sync, it serves the service you ask for.</p>
+        <p>The relay keeps your email address, encrypted, and an unreadable fingerprint that is used to recognize you; if you sign in with Google, an unreadable identifier of your Google account and its address, encrypted, but neither your name nor your photo. It also keeps the list of your devices (type and dates, to the day), your encrypted library and key envelopes, which it cannot open. Your recovery code never leaves your devices: the relay keeps only values computed from it, which cannot be used to recover it. To get everything the relay keeps about your account in a file, choose “What the server keeps about me” in Account and sync.</p>
+        <p>Sign-in codes and security notices, such as a new device or an account deletion, are sent from <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>, through Infomaniak (Switzerland). A code email says what type of device and which country the request came from: the relay deduces that country from your IP address with the IP Geolocation by DB-IP database (CC BY 4.0 licence), without keeping it. Mirinu never writes to advertise. If you sign in with Google, Google knows that you use Mirinu; on app.mirinu.ch, Google's button loads as soon as the sign-in screen opens, and Google then sees your IP address. Google adheres to the Data Privacy Framework.</p>
+        <p>Before a code is emailed, a Cloudflare anti-bot check (Turnstile) reads your IP address and information about your browser. The relay also asks Cloudflare whether the domain of your address (what follows the @) receives email; neither your full address nor your IP address goes there. To curb abuse, the relay also counts requests per email address and per IP address, in an unreadable form erased the next day. These protections rest on the legitimate interest in protecting the service.</p>
+        <p>A sign-in code is valid for 10&nbsp;minutes. In a browser, a sign-in lasts 30&nbsp;days, or 24&nbsp;hours on a shared computer. Account data, with the encrypted copy of your library attached to it, stays as long as the account exists. You can delete it whenever you want: it is erased 7&nbsp;days after your request, or right away from a linked device, then leaves the relay's backups within 7 more days. An account with no sign-in or sync for 24&nbsp;months is erased, after a warning email sent 30&nbsp;days before, when Mirinu has an address to reach you.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Providers and countries</h2>
-        <p>The relay runs on a server rented from Infomaniak (Switzerland), which also hosts the contact@mirinu.ch mailbox. The same server serves mirinu.ch and app.mirinu.ch, without keeping a log of visits. Cloudflare (United States) is used only for the Turnstile bot check. Cloudflare takes part in the Data Privacy Framework, which Switzerland and the EU recognize for data sent to the United States.</p>
+        <p>The relay runs on a server rented from Infomaniak (Switzerland), which also hosts the <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> mailbox. The same server serves mirinu.ch and app.mirinu.ch, without keeping a log of visits. Cloudflare (United States) is used only for the Turnstile bot check and to check the domain of an email address. For signing in with Google, Google (United States) is involved too. Cloudflare and Google take part in the Data Privacy Framework, which Switzerland and the EU recognize for data sent to the United States.</p>
       </section>
 
       <section aria-labelledby="bases">
         <h2 id="bases">Legal bases and retention</h2>
         <p>Mirinu follows the Swiss data protection act and, for people in the EU, the GDPR. Sync and showing title pages serve the service you ask for (Art. 6(1)(b) GDPR). Matching and hosting rest on the legitimate interest in running the service (Art. 6(1)(f)). The anti-bot check and the per-address count rest on the same legitimate interest: protecting the service against abuse.</p>
-        <p>Mirinu does not keep your IP address: to curb abuse, the relay counts requests per address, in an unreadable form erased the next day. It erases a synced copy 180 days after its last sync, and a space left empty after one day. The relay's nightly backups keep what is erased for up to 7 more days. An email you send is kept while your request is handled.</p>
+        <p>Mirinu does not keep your IP address: to curb abuse, the relay counts requests per address, in an unreadable form erased the next day. It erases a sync without an account 180&nbsp;days after its last sync, and a space left empty after one day. The relay's nightly backups keep what is erased for up to 7 more days. An email you send is kept while your request is handled.</p>
       </section>
 
       <section aria-labelledby="droits">

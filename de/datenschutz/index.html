@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datenschutz, Mirinu</title>
-<meta name="description" content="Was Mirinu mit deinen Daten macht: Deine Bibliothek bleibt auf deinem Gerät, die Synchronisierung ist verschlüsselt, kein Konto und keine Tracker.">
+<meta name="description" content="Was Mirinu mit deinen Daten macht: Deine Bibliothek bleibt auf deinem Gerät, die Synchronisierung ist verschlüsselt, Konto freiwillig, keine Tracker.">
 <link rel="canonical" href="https://mirinu.ch/de/datenschutz/">
 <link rel="alternate" hreflang="fr" href="https://mirinu.ch/confidentialite/">
 <link rel="alternate" hreflang="en" href="https://mirinu.ch/en/privacy/">
@@ -42,10 +42,10 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Datenschutz</h1>
-      <p class="date">Aktualisiert am 7. November 2026.</p>
+      <p class="date">Aktualisiert am 8. November 2026.</p>
       <p class="foi">Übersetzt aus der <a href="/confidentialite/" hreflang="fr">französischen Fassung</a>, die bei Abweichungen massgebend ist.</p>
       <p class="chapeau">Mirinu ist ein persönliches Projekt von Marco in der Schweiz. Er ist für die hier beschriebenen Daten verantwortlich. Bei Fragen: <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>.</p>
     </div>
@@ -53,7 +53,7 @@
     <div class="rubriques">
       <section aria-labelledby="appareil">
         <h2 id="appareil">Auf deinem Gerät</h2>
-        <p>Mirinu hat kein Konto und fragt weder nach deinem Namen noch nach deiner E-Mail-Adresse. Deine Bibliothek, deine Bewertungen und deine Einstellungen bleiben auf deinem Gerät: in der App unter Android, im Speicher des Browsers auf app.mirinu.ch, ohne Cookies. Eine Datei, die du importierst, wird vor Ort gelesen und nirgendwohin gesendet.</p>
+        <p>Das Konto ist freiwillig. Ohne Konto fragt Mirinu weder nach deinem Namen noch nach deiner E-Mail-Adresse. Deine Bibliothek, deine Bewertungen und deine Einstellungen bleiben auf deinem Gerät: in der App unter Android, im Speicher des Browsers auf app.mirinu.ch, ohne Cookies. Eine Datei, die du importierst, wird vor Ort gelesen und nirgendwohin gesendet.</p>
         <p>Wenn unter Android die Google-Sicherung deines Telefons aktiv ist, kann sie deine Bibliothek kopieren, wie bei deinen anderen Apps.</p>
         <p>Keine Werbung, keine Tracker, keine Reichweitenmessung.</p>
       </section>
@@ -85,15 +85,24 @@
         <p>Der Relay-Server speichert nie deine IP-Adresse, dein Land, das Token der Bot-Prüfung, dein Gerät oder dein Konto. Dein Land leitet er beim Senden aus deiner IP-Adresse ab, ohne es zu speichern, um Sendungen aus Russland abzulehnen; dafür nutzt er <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, Lizenz CC BY 4.0). Die Bot-Prüfung ist Turnstile von Cloudflare: Sie liest deine IP-Adresse und Angaben zu deinem Browser.</p>
       </section>
 
+      <section aria-labelledby="compte">
+        <h2 id="compte">Mit Konto</h2>
+        <p>Das Konto ist Personen ab 15&nbsp;Jahren vorbehalten. Damit findest du deine Bibliothek wieder, wenn du dein Gerät verlierst, und verwaltest deine Geräte in jedem Browser. Wie die Synchronisierung dient es dem Dienst, den du anforderst.</p>
+        <p>Der Relay-Server speichert deine E-Mail-Adresse, verschlüsselt, und einen unlesbaren Fingerabdruck, an dem er dich erkennt; wenn du dich mit Google anmeldest, eine unlesbare Kennung deines Google-Kontos und dessen Adresse, verschlüsselt, aber weder deinen Namen noch dein Foto. Dazu die Liste deiner Geräte (Typ und Daten, auf den Tag genau), deine verschlüsselte Bibliothek und Schlüsselumschläge, die er nicht öffnen kann. Dein Wiederherstellungscode verlässt deine Geräte nie: Der Relay-Server speichert davon nur daraus berechnete Werte, mit denen sich der Code nicht rekonstruieren lässt. Um alles, was der Relay-Server zu deinem Konto speichert, als Datei zu erhalten, wähle „Was der Server über mich speichert“ unter Konto und Synchronisierung.</p>
+        <p>Anmeldecodes und Sicherheitshinweise, etwa zu einem neuen Gerät oder einer Kontolöschung, kommen von <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>, über Infomaniak (Schweiz). Die E-Mail mit einem Code nennt den Gerätetyp und das Land, aus dem die Anfrage kam: Der Relay-Server leitet dieses Land aus deiner IP-Adresse mit der Datenbank IP Geolocation by DB-IP (Lizenz CC BY 4.0) ab, ohne es zu speichern. Mirinu schreibt dir nie für Werbung. Wenn du dich mit Google anmeldest, weiss Google, dass du Mirinu nutzt; auf app.mirinu.ch lädt sich die Schaltfläche von Google, sobald sich der Anmeldebildschirm öffnet, und Google sieht dann deine IP-Adresse. Google nimmt am Data Privacy Framework teil.</p>
+        <p>Bevor ein Code per E-Mail verschickt wird, liest eine Bot-Prüfung von Cloudflare (Turnstile) deine IP-Adresse und Angaben zu deinem Browser. Der Relay-Server fragt ausserdem bei Cloudflare nach, ob die Domain deiner Adresse (was auf das @ folgt) E-Mails empfängt; weder deine vollständige Adresse noch deine IP-Adresse gehen dorthin. Gegen Missbrauch zählt der Relay-Server auch die Anfragen pro E-Mail-Adresse und pro IP-Adresse, in unlesbarer Form, die am nächsten Tag gelöscht wird. Diese Schutzmassnahmen beruhen auf dem berechtigten Interesse, den Dienst zu schützen.</p>
+        <p>Ein Anmeldecode gilt 10&nbsp;Minuten. In einem Browser bleibt die Anmeldung 30&nbsp;Tage bestehen, auf einem gemeinsam genutzten Computer 24&nbsp;Stunden. Die Kontodaten, mit der daran gebundenen verschlüsselten Kopie deiner Bibliothek, bleiben, solange das Konto besteht. Du kannst es jederzeit löschen: Es wird 7&nbsp;Tage nach deiner Anfrage gelöscht, von einem verbundenen Gerät aus sofort, und verschwindet 7&nbsp;Tage später aus den Sicherungen des Relay-Servers. Ein Konto ohne Anmeldung und Synchronisierung seit 24&nbsp;Monaten wird gelöscht, nach einer Warn-E-Mail, die 30&nbsp;Tage vorher verschickt wird, sofern Mirinu eine Adresse hat, um dich zu erreichen.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Dienstleister und Länder</h2>
-        <p>Der Relay-Server läuft auf einem bei Infomaniak (Schweiz) gemieteten Server; Infomaniak hostet auch das Postfach contact@mirinu.ch. Derselbe Server stellt mirinu.ch und app.mirinu.ch bereit, ohne ein Protokoll der Besuche zu führen. Cloudflare (USA) kommt nur für die Bot-Prüfung Turnstile zum Einsatz. Cloudflare nimmt am Data Privacy Framework teil, das die Schweiz und die EU für Daten anerkennen, die in die USA gehen.</p>
+        <p>Der Relay-Server läuft auf einem bei Infomaniak (Schweiz) gemieteten Server; Infomaniak hostet auch das Postfach <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>. Derselbe Server stellt mirinu.ch und app.mirinu.ch bereit, ohne ein Protokoll der Besuche zu führen. Cloudflare (USA) kommt nur für die Bot-Prüfung Turnstile und für die Prüfung der Domain einer E-Mail-Adresse zum Einsatz. Für die Anmeldung mit Google kommt auch Google (USA) zum Einsatz. Cloudflare und Google nehmen am Data Privacy Framework teil, das die Schweiz und die EU für Daten anerkennen, die in die USA gehen.</p>
       </section>
 
       <section aria-labelledby="bases">
         <h2 id="bases">Rechtsgrundlagen und Speicherdauer</h2>
         <p>Mirinu hält sich an das Schweizer Datenschutzgesetz und, für Personen in der EU, an die DSGVO. Die Synchronisierung und die Anzeige der Titel dienen dem Dienst, den du anforderst (Art. 6 Abs. 1 lit. b DSGVO). Die Zuordnungen und das Hosting beruhen auf dem berechtigten Interesse, den Dienst zu betreiben (lit. f). Die Bot-Prüfung und die Zählung pro Adresse beruhen auf demselben berechtigten Interesse: den Dienst vor Missbrauch zu schützen.</p>
-        <p>Mirinu speichert deine IP-Adresse nicht: Gegen Missbrauch zählt der Relay-Server die Anfragen pro Adresse, in unlesbarer Form, die am nächsten Tag gelöscht wird. Er löscht eine synchronisierte Kopie 180 Tage nach ihrer letzten Synchronisierung und einen leer gebliebenen Bereich nach einem Tag. Die nächtlichen Sicherungen des Relay-Servers behalten Gelöschtes bis zu 7 weitere Tage. Eine E-Mail, die du schickst, wird aufbewahrt, bis deine Anfrage erledigt ist.</p>
+        <p>Mirinu speichert deine IP-Adresse nicht: Gegen Missbrauch zählt der Relay-Server die Anfragen pro Adresse, in unlesbarer Form, die am nächsten Tag gelöscht wird. Er löscht eine Synchronisierung ohne Konto 180&nbsp;Tage nach ihrer letzten Synchronisierung und einen leer gebliebenen Bereich nach einem Tag. Die nächtlichen Sicherungen des Relay-Servers behalten Gelöschtes bis zu 7 weitere Tage. Eine E-Mail, die du schickst, wird aufbewahrt, bis deine Anfrage erledigt ist.</p>
       </section>
 
       <section aria-labelledby="droits">

@@ -42,12 +42,12 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Deine Daten löschen</h1>
-      <p class="date">Aktualisiert am 6. November 2026.</p>
+      <p class="date">Aktualisiert am 8. November 2026.</p>
       <p class="foi">Übersetzt aus der <a href="/supprimer/" hreflang="fr">französischen Fassung</a>, die bei Abweichungen massgebend ist.</p>
-      <p class="chapeau">Mirinu hat kein Konto. Deine Daten sind auf deinen Geräten und, wenn du die Synchronisierung nutzt, in einer verschlüsselten Kopie auf dem Relay-Server von Mirinu.</p>
+      <p class="chapeau">Deine Daten sind auf deinen Geräten und, wenn du die Synchronisierung oder ein Konto nutzt, auf dem Relay-Server von Mirinu: eine verschlüsselte Kopie deiner Bibliothek und, mit einem Konto, deine E-Mail-Adresse, verschlüsselt.</p>
     </div>
 
     <div class="rubriques">
@@ -64,15 +64,20 @@
       <section aria-labelledby="relais">
         <h2 id="relais">Die Kopie der Synchronisierung</h2>
         <ol class="etapes">
-          <li>Öffne auf jedem verbundenen Gerät Synchronisierung, unter Profil auf dem Telefon oder unter Einstellungen auf dem Computer.</li>
+          <li>Öffne auf jedem verbundenen Gerät Konto und Synchronisierung, unter Profil auf dem Telefon oder unter Einstellungen auf dem Computer.</li>
           <li>Wähle „Synchronisierung auf diesem Gerät beenden“.</li>
         </ol>
-        <p>Wenn kein Gerät mehr synchronisiert, löscht der Relay-Server die verschlüsselte Kopie nach 180&nbsp;Tagen. Er kann sie nicht lesen und weiss nicht, wem sie gehört.</p>
+        <p>Bei einer Synchronisierung ohne Konto löscht der Relay-Server die verschlüsselte Kopie nach 180&nbsp;Tagen, sobald kein Gerät mehr synchronisiert. Er kann sie nicht lesen und weiss nicht, wem sie gehört.</p>
       </section>
 
       <section aria-labelledby="profil-public">
         <h2 id="profil-public">Dein öffentliches Profil</h2>
         <p>Wenn du dein Profil teilst, beende das Teilen in der App (Mein Profil teilen, Teilen beenden): Die Seite wird vom Relay-Server gelöscht, sobald die App ihn erreicht. Ohne die App schreib an <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a> mit dem Link. Sonst wird sie 180 Tage nach ihrer letzten Aktualisierung gelöscht.</p>
+      </section>
+
+      <section aria-labelledby="compte">
+        <h2 id="compte">Dein Konto</h2>
+        <p>Wenn du ein Konto hast, lösche es in der App (Konto und Synchronisierung, Mein Konto löschen) oder auf <a href="https://app.mirinu.ch/#/supprimer">app.mirinu.ch/#/supprimer</a>, ohne die App zu installieren. Konto, E-Mail-Adresse und verschlüsselte Bibliothek werden 7&nbsp;Tage nach deiner Anfrage vom Relay-Server gelöscht; bis dahin kannst du abbrechen. Von einem verbundenen Gerät aus löscht „Sofort löschen“ sie ohne Wartezeit. „Synchronisierung ohne Konto behalten“ löscht das Konto und lässt die Synchronisierung zwischen deinen Geräten bestehen. Die Sicherungen des Relay-Servers behalten Gelöschtes bis zu 7 weitere Tage. Was auf deinen Geräten ist, bleibt dort.</p>
       </section>
 
       <section aria-labelledby="question">

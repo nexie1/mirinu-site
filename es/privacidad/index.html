@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacidad, Mirinu</title>
-<meta name="description" content="Qué hace Mirinu con tus datos: tu biblioteca se queda en tu dispositivo, la sincronización está cifrada, sin cuenta ni rastreadores.">
+<meta name="description" content="Qué hace Mirinu con tus datos: tu biblioteca se queda en tu dispositivo, la sincronización está cifrada, cuenta opcional, sin rastreadores.">
 <link rel="canonical" href="https://mirinu.ch/es/privacidad/">
 <link rel="alternate" hreflang="fr" href="https://mirinu.ch/confidentialite/">
 <link rel="alternate" hreflang="en" href="https://mirinu.ch/en/privacy/">
@@ -42,10 +42,10 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Privacidad</h1>
-      <p class="date">Actualizado el 7 de noviembre de 2026.</p>
+      <p class="date">Actualizado el 8 de noviembre de 2026.</p>
       <p class="foi">Traducido de la <a href="/confidentialite/" hreflang="fr">versión francesa</a>, que prevalece si hay diferencias.</p>
       <p class="chapeau">Mirinu es un proyecto personal de Marco, en Suiza. Él es el responsable de los datos descritos aquí. Para cualquier pregunta: <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>.</p>
     </div>
@@ -53,7 +53,7 @@
     <div class="rubriques">
       <section aria-labelledby="appareil">
         <h2 id="appareil">En tu dispositivo</h2>
-        <p>Mirinu no tiene cuenta y no te pide ni nombre ni dirección de correo. Tu biblioteca, tus valoraciones y tus ajustes se quedan en tu dispositivo: en la app en Android, en el almacenamiento del navegador en app.mirinu.ch, sin cookies. Un archivo que importas se lee allí mismo y no se envía a ninguna parte.</p>
+        <p>La cuenta es opcional. Sin cuenta, Mirinu no te pide ni nombre ni dirección de correo. Tu biblioteca, tus valoraciones y tus ajustes se quedan en tu dispositivo: en la app en Android, en el almacenamiento del navegador en app.mirinu.ch, sin cookies. Un archivo que importas se lee allí mismo y no se envía a ninguna parte.</p>
         <p>En Android, si la copia de seguridad de Google de tu teléfono está activada, puede copiar tu biblioteca, como con tus otras apps.</p>
         <p>Sin publicidad, sin rastreadores, sin medición de audiencia.</p>
       </section>
@@ -85,15 +85,24 @@
         <p>El servidor intermediario nunca guarda tu dirección IP, tu país, el token del control antibots, tu dispositivo ni tu cuenta. Deduce tu país de tu dirección IP en el momento del envío, sin guardarlo, para rechazar los envíos desde Rusia, con <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, licencia CC BY 4.0). El control antibots es Turnstile, de Cloudflare: lee tu dirección IP e información sobre tu navegador.</p>
       </section>
 
+      <section aria-labelledby="compte">
+        <h2 id="compte">Con una cuenta</h2>
+        <p>La cuenta está reservada a personas de 15&nbsp;años o más. Sirve para recuperar tu biblioteca si pierdes tu dispositivo y para gestionar tus dispositivos desde cualquier navegador. Como la sincronización, sirve al servicio que pides.</p>
+        <p>El servidor intermediario guarda tu dirección de correo, cifrada, y una huella ilegible que sirve para reconocerte; si inicias sesión con Google, un identificador ilegible de tu cuenta de Google y su dirección, cifrada, pero ni tu nombre ni tu foto. Guarda también la lista de tus dispositivos (tipo y fechas, al día), tu biblioteca cifrada y sobres de claves, que no puede abrir. Tu código de recuperación nunca sale de tus dispositivos: el servidor solo guarda valores calculados a partir de él, que no permiten recuperarlo. Para recibir en un archivo todo lo que el servidor guarda sobre tu cuenta, elige «Lo que el servidor guarda sobre mí» en Cuenta y sincronización.</p>
+        <p>Los códigos de acceso y los avisos de seguridad, como un dispositivo nuevo o el borrado de la cuenta, salen de <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>, a través de Infomaniak (Suiza). El correo de un código indica el tipo de dispositivo y el país desde el que llega la solicitud: el servidor deduce ese país de tu dirección IP con la base de datos IP Geolocation by DB-IP (licencia CC BY 4.0), sin guardarlo. Mirinu nunca te escribe para hacer publicidad. Si inicias sesión con Google, Google sabe que usas Mirinu; en app.mirinu.ch, el botón de Google se carga en cuanto se abre la pantalla de inicio de sesión, y Google ve entonces tu dirección IP. Google se adhiere al Data Privacy Framework.</p>
+        <p>Antes de enviar un código por correo, un control antibots de Cloudflare (Turnstile) lee tu dirección IP e información sobre tu navegador. El servidor también pregunta a Cloudflare si el dominio de tu dirección (lo que sigue a la @) recibe correo; ni tu dirección completa ni tu dirección IP llegan allí. Para frenar los abusos, el servidor también cuenta las solicitudes por dirección de correo y por dirección IP, de forma ilegible y borrada al día siguiente. Estas protecciones se basan en el interés legítimo en proteger el servicio.</p>
+        <p>Un código de acceso vale 10&nbsp;minutos. En un navegador, el inicio de sesión dura 30&nbsp;días, o 24&nbsp;horas en un ordenador compartido. Los datos de la cuenta, con la copia cifrada de tu biblioteca que le está unida, se conservan mientras exista. Puedes borrarla cuando quieras: se borra 7&nbsp;días después de tu solicitud, o ahora mismo desde un dispositivo vinculado, y desaparece de las copias de seguridad del servidor 7&nbsp;días después. Una cuenta sin inicio de sesión ni sincronización durante 24&nbsp;meses se borra, tras un correo de aviso enviado 30&nbsp;días antes, cuando Mirinu tiene una dirección para localizarte.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Proveedores y países</h2>
-        <p>El servidor intermediario funciona en un servidor alquilado a Infomaniak (Suiza), que también aloja el buzón contact@mirinu.ch. El mismo servidor sirve mirinu.ch y app.mirinu.ch, sin guardar un registro de las visitas. Cloudflare (Estados Unidos) solo interviene en el control antibots Turnstile. Cloudflare se adhiere al Data Privacy Framework, que Suiza y la UE reconocen para los datos enviados a Estados Unidos.</p>
+        <p>El servidor intermediario funciona en un servidor alquilado a Infomaniak (Suiza), que también aloja el buzón <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>. El mismo servidor sirve mirinu.ch y app.mirinu.ch, sin guardar un registro de las visitas. Cloudflare (Estados Unidos) solo interviene en el control antibots Turnstile y en la comprobación del dominio de una dirección de correo. Para el inicio de sesión con Google interviene también Google (Estados Unidos). Cloudflare y Google se adhieren al Data Privacy Framework, que Suiza y la UE reconocen para los datos enviados a Estados Unidos.</p>
       </section>
 
       <section aria-labelledby="bases">
         <h2 id="bases">Bases jurídicas y plazos</h2>
         <p>Mirinu sigue la ley suiza de protección de datos y, para las personas en la UE, el RGPD. La sincronización y la visualización de las fichas sirven al servicio que pides (art. 6.1.b RGPD). Las correspondencias y el alojamiento se basan en el interés legítimo en hacer funcionar el servicio (art. 6.1.f). El control antibots y el recuento por dirección se basan en el mismo interés legítimo: proteger el servicio contra los abusos.</p>
-        <p>Mirinu no guarda tu dirección IP: para frenar los abusos, el servidor intermediario cuenta las solicitudes por dirección, de forma ilegible y borrada al día siguiente. Borra una copia sincronizada 180 días después de su última sincronización, y un espacio que sigue vacío después de un día. Las copias de seguridad nocturnas del servidor intermediario guardan lo borrado hasta 7 días más. Un correo que envías se guarda el tiempo necesario para tramitar tu solicitud.</p>
+        <p>Mirinu no guarda tu dirección IP: para frenar los abusos, el servidor intermediario cuenta las solicitudes por dirección, de forma ilegible y borrada al día siguiente. Borra una sincronización sin cuenta 180&nbsp;días después de su última sincronización, y un espacio que sigue vacío después de un día. Las copias de seguridad nocturnas del servidor intermediario guardan lo borrado hasta 7&nbsp;días más. Un correo que envías se guarda el tiempo necesario para tramitar tu solicitud.</p>
       </section>
 
       <section aria-labelledby="droits">

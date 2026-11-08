@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Confidentialité, Mirinu</title>
-<meta name="description" content="Ce que Mirinu fait de tes données : ta bibliothèque reste sur ton appareil, la synchro est chiffrée, pas de compte ni de traqueur.">
+<meta name="description" content="Ce que Mirinu fait de tes données : ta bibliothèque reste sur ton appareil, la synchro est chiffrée, compte facultatif, pas de traqueur.">
 <link rel="canonical" href="https://mirinu.ch/confidentialite/">
 <link rel="alternate" hreflang="fr" href="https://mirinu.ch/confidentialite/">
 <link rel="alternate" hreflang="en" href="https://mirinu.ch/en/privacy/">
@@ -42,17 +42,17 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Confidentialité</h1>
-      <p class="date">Mise à jour le 7 novembre 2026.</p>
+      <p class="date">Mise à jour le 8 novembre 2026.</p>
       <p class="chapeau">Mirinu est un projet personnel de Marco, en Suisse. Il est responsable des données décrites ici. Pour toute question&nbsp;: <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>.</p>
     </div>
 
     <div class="rubriques">
       <section aria-labelledby="appareil">
         <h2 id="appareil">Sur ton appareil</h2>
-        <p>Mirinu n'a pas de compte et ne te demande ni nom ni adresse mail. Ta bibliothèque, tes notes et tes réglages restent sur ton appareil&nbsp;: dans l'app sur Android, dans le stockage du navigateur sur app.mirinu.ch, sans cookie. Un fichier que tu importes est lu sur place et n'est envoyé nulle part.</p>
+        <p>Le compte est facultatif. Sans compte, Mirinu ne te demande ni nom ni adresse mail. Ta bibliothèque, tes notes et tes réglages restent sur ton appareil&nbsp;: dans l'app sur Android, dans le stockage du navigateur sur app.mirinu.ch, sans cookie. Un fichier que tu importes est lu sur place et n'est envoyé nulle part.</p>
         <p>Sur Android, si la sauvegarde Google de ton téléphone est active, elle peut copier ta bibliothèque, comme pour tes autres apps.</p>
         <p>Pas de publicité, pas de traqueur, pas de mesure d'audience.</p>
       </section>
@@ -84,15 +84,24 @@
         <p>Le relais ne garde jamais ton adresse IP, ton pays, le jeton du test anti-robot, ton appareil ni ton compte. Il déduit ton pays de ton adresse IP au moment de l'envoi, sans le garder, pour refuser les envois de Russie, avec la base <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, licence CC BY 4.0). Le test anti-robot est Turnstile, de Cloudflare&nbsp;: il lit ton adresse IP et des informations sur ton navigateur.</p>
       </section>
 
+      <section aria-labelledby="compte">
+        <h2 id="compte">Avec un compte</h2>
+        <p>Le compte est réservé aux personnes de 15&nbsp;ans ou plus. Il sert à retrouver ta bibliothèque si tu perds ton appareil et à gérer tes appareils depuis n'importe quel navigateur. Comme la synchro, il sert le service que tu demandes.</p>
+        <p>Le relais garde ton adresse mail, chiffrée, et une empreinte illisible qui sert à te reconnaître&nbsp;; si tu te connectes avec Google, un identifiant illisible de ton compte Google et son adresse, chiffrée, mais ni ton nom ni ta photo. Il garde aussi la liste de tes appareils (type et dates, au jour près), ta bibliothèque chiffrée et des enveloppes de clés, qu'il ne peut pas ouvrir. Ton code de secours ne quitte pas tes appareils&nbsp;: le relais n'en garde que des valeurs calculées à partir de lui, qui ne permettent pas de le retrouver. Pour recevoir dans un fichier tout ce que le relais garde de ton compte, choisis «&nbsp;Ce que le serveur garde sur moi&nbsp;» dans Compte et synchronisation.</p>
+        <p>Les codes de connexion et les avis de sécurité, comme un nouvel appareil ou une suppression de compte, partent de <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>, par Infomaniak (Suisse). Le mail d'un code dit de quel type d'appareil et de quel pays vient la demande&nbsp;: le relais déduit ce pays de ton adresse IP avec la base IP Geolocation by DB-IP (licence CC BY 4.0), sans le garder. Mirinu ne t'écrit jamais pour de la publicité. Si tu te connectes avec Google, Google sait que tu utilises Mirinu&nbsp;; sur app.mirinu.ch, le bouton de Google se charge dès que l'écran de connexion s'ouvre, et Google voit alors ton adresse IP. Google adhère au Data Privacy Framework.</p>
+        <p>Avant l'envoi d'un code par mail, un contrôle anti-robots de Cloudflare (Turnstile) lit ton adresse IP et des informations sur ton navigateur. Le relais demande aussi à Cloudflare si le domaine de ton adresse (ce qui suit le @) reçoit des mails&nbsp;; ni ton adresse complète ni ton adresse IP n'y vont. Pour freiner les abus, le relais compte aussi les demandes par adresse mail et par adresse IP, sous une forme illisible effacée le lendemain. Ces protections reposent sur l'intérêt légitime à protéger le service.</p>
+        <p>Un code de connexion vaut 10&nbsp;minutes. Dans un navigateur, la connexion dure 30&nbsp;jours, ou 24&nbsp;heures sur un ordinateur partagé. Les données du compte, avec la copie chiffrée de ta bibliothèque qui lui est rattachée, restent tant que le compte existe. Tu peux le supprimer quand tu veux&nbsp;: il est effacé 7&nbsp;jours après ta demande, ou tout de suite depuis un appareil relié, puis disparaît des sauvegardes du relais en 7&nbsp;jours de plus. Un compte sans connexion ni synchro depuis 24&nbsp;mois est effacé, après un mail d'avertissement envoyé 30&nbsp;jours avant, quand Mirinu a une adresse pour te joindre.</p>
+      </section>
+
       <section aria-labelledby="prestataires">
         <h2 id="prestataires">Prestataires et pays</h2>
-        <p>Le relais tourne sur un serveur loué chez Infomaniak (Suisse), qui héberge aussi la boîte contact@mirinu.ch. Le même serveur sert mirinu.ch et app.mirinu.ch, sans garder de journal des visites. Cloudflare (États-Unis) n'intervient que pour le test anti-robot Turnstile. Cloudflare adhère au Data Privacy Framework, que la Suisse et l'UE reconnaissent pour les données envoyées aux États-Unis.</p>
+        <p>Le relais tourne sur un serveur loué chez Infomaniak (Suisse), qui héberge aussi la boîte <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>. Le même serveur sert mirinu.ch et app.mirinu.ch, sans garder de journal des visites. Cloudflare (États-Unis) n'intervient que pour le test anti-robot Turnstile et pour la vérification du domaine d'une adresse mail. Pour la connexion avec Google, Google (États-Unis) intervient aussi. Cloudflare et Google adhèrent au Data Privacy Framework, que la Suisse et l'UE reconnaissent pour les données envoyées aux États-Unis.</p>
       </section>
 
       <section aria-labelledby="bases">
         <h2 id="bases">Bases légales et durées</h2>
         <p>Mirinu suit la loi suisse sur la protection des données et, pour les personnes dans l'UE, le RGPD. La synchro et l'affichage des fiches servent le service que tu demandes (art. 6, par. 1, let. b RGPD). Les correspondances et l'hébergement reposent sur l'intérêt légitime à faire marcher le service (let. f). Le contrôle anti-robots et le comptage par adresse reposent sur le même intérêt légitime&nbsp;: protéger le service contre les abus.</p>
-        <p>Mirinu ne garde pas ton adresse IP&nbsp;: pour freiner les abus, le relais compte les demandes par adresse, sous une forme illisible effacée le lendemain. Il efface une copie synchronisée 180 jours après sa dernière synchro, et un espace resté vide après un jour. Les sauvegardes du relais, faites chaque nuit, gardent ce qui est effacé jusqu'à 7 jours de plus. Un mail que tu envoies est gardé le temps de traiter ta demande.</p>
+        <p>Mirinu ne garde pas ton adresse IP&nbsp;: pour freiner les abus, le relais compte les demandes par adresse, sous une forme illisible effacée le lendemain. Il efface une synchro sans compte 180&nbsp;jours après sa dernière synchro, et un espace resté vide après un jour. Les sauvegardes du relais, faites chaque nuit, gardent ce qui est effacé jusqu'à 7&nbsp;jours de plus. Un mail que tu envoies est gardé le temps de traiter ta demande.</p>
       </section>
 
       <section aria-labelledby="droits">
