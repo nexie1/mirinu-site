@@ -19,7 +19,7 @@
 - Pas de publicité, pas de traqueur, pas de mesure d'audience, ni dans l'app ni sur mirinu.ch.
 - Synchronisation facultative entre appareils, reliés par un code ou un QR code valable deux minutes. Les données sont chiffrées sur l'appareil (AES-256-GCM) avant d'être envoyées ; le relais ne peut pas les lire et efface une synchro sans compte qui ne sert plus depuis 180 jours.
 - Profil public facultatif, éteint au départ : une page en lecture seule sur mirinu.ch, par un lien tiré au hasard, avec le nom choisi et, pour les types choisis, les titres, leur statut, les favoris et les notes sur 10, mise à jour au plus une fois par heure. C'est la seule donnée que le relais garde en clair ; arrêter le partage l'efface dès que l'app joint le relais, et une page non mise à jour depuis 180 jours est effacée. La page dit que Mirinu n'en vérifie pas le contenu.
-- Les métadonnées (affiches, résumés, dates) viennent de TMDB et MangaUpdates, qui ne reçoivent que le titre recherché.
+- Les métadonnées (affiches, résumés, dates) viennent de TMDB et MangaUpdates, qui ne reçoivent que le titre recherché ; certaines affiches de séries viennent de TVmaze.
 
 ## Prix
 
