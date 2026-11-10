@@ -85,6 +85,13 @@
         <p>The relay never keeps your IP address, your country, the bot check token, your device or your account. It works out your country from your IP address when you send, without keeping it, to refuse sends from Russia, using <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, license CC BY 4.0). The bot check is Turnstile, by Cloudflare: it reads your IP address and information about your browser.</p>
       </section>
 
+      <section aria-labelledby="commentaires">
+        <h2 id="commentaires">Comments from Trakt</h2>
+        <p>Mirinu shows public comments from Trakt, read-only; it writes none. To show them, the app asks the relay for the comments of a title, and the relay asks Trakt with the title's number, with nothing that identifies you. An image or a GIF in a comment only loads after you tap it, from the site that hosts it, which then sees your IP address. Each comment's menu lets you report it and hide its author.</p>
+        <p>For a report, the relay reads the comment again at Trakt and keeps its number, its text and the addresses of its images, its author's public username, the title where you saw it, the reason you chose, the day and a salted fingerprint of the block of network addresses the report came from. It erases the text at Marco's decision, or after 60 days with no decision, and the fingerprint and the reason after 30 days at most. When three different networks have reported a comment, it is hidden for everyone until that decision. If Marco hides a comment or an author, the relay keeps with no time limit the comment's number or the author's username, so that it does not come back, until Marco undoes it. If he leaves a comment visible, the relay keeps its number for 90 days. The relay's backups, which last 7 days, contain this data.</p>
+        <p>A comment you report and an author you hide are also remembered on your device, to hide them. This list is neither synced nor backed up, and hiding an author sends nothing to the relay. The relay never keeps your IP address, your country, the bot check token, your device or your account. The country check and the bot check are the ones described for posters.</p>
+      </section>
+
       <section aria-labelledby="compte">
         <h2 id="compte">With an account</h2>
         <p>The account is only for people aged 15 or over. It lets you get your library back if you lose your device, and manage your devices from any browser. Like sync, it serves the service you ask for.</p>

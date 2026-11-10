@@ -84,6 +84,13 @@
         <p>Le relais ne garde jamais ton adresse IP, ton pays, le jeton du test anti-robot, ton appareil ni ton compte. Il déduit ton pays de ton adresse IP au moment de l'envoi, sans le garder, pour refuser les envois de Russie, avec la base <a href="https://db-ip.com">IP Geolocation by DB-IP</a> (<a href="https://db-ip.com">https://db-ip.com</a>, licence CC BY 4.0). Le test anti-robot est Turnstile, de Cloudflare&nbsp;: il lit ton adresse IP et des informations sur ton navigateur.</p>
       </section>
 
+      <section aria-labelledby="commentaires">
+        <h2 id="commentaires">Les commentaires de Trakt</h2>
+        <p>Mirinu affiche des commentaires publics de Trakt, en lecture seule&nbsp;; il n'en écrit aucun. Pour les afficher, l'app demande au relais ceux d'une fiche, et le relais les demande à Trakt avec le numéro de la fiche, sans rien qui te désigne. Une image ou un GIF d'un commentaire ne se charge qu'après ton appui, depuis le site qui l'héberge, qui voit alors ton adresse IP. Le menu de chaque commentaire permet de le signaler et de masquer son auteur.</p>
+        <p>Pour un signalement, le relais relit le commentaire chez Trakt et garde son numéro, son texte et les adresses de ses images, le pseudo public de son auteur, la fiche où tu l'as vu, le motif choisi, le jour et une empreinte salée du bloc d'adresses réseau d'où vient le signalement. Il efface le texte à la décision de Marco, ou après 60 jours sans décision, et l'empreinte et le motif au bout de 30 jours au plus. Quand trois réseaux différents ont signalé un commentaire, il est caché pour tout le monde en attendant cette décision. Si Marco masque un commentaire ou un auteur, le relais garde sans limite de durée le numéro du commentaire ou le pseudo de l'auteur, pour qu'il ne revienne pas, jusqu'à ce que Marco annule. S'il laisse un commentaire visible, le relais garde son numéro 90 jours. Les sauvegardes du relais, qui durent 7 jours, contiennent ces données.</p>
+        <p>Un commentaire que tu signales et un auteur que tu masques sont aussi retenus sur ton appareil, pour les cacher. Cette liste n'est ni synchronisée ni sauvegardée, et masquer un auteur n'envoie rien au relais. Le relais ne garde jamais ton adresse IP, ton pays, le jeton du test anti-robot, ton appareil ni ton compte. Le contrôle du pays et le test anti-robot sont ceux décrits pour les affiches.</p>
+      </section>
+
       <section aria-labelledby="compte">
         <h2 id="compte">Avec un compte</h2>
         <p>Le compte est réservé aux personnes de 15&nbsp;ans ou plus. Il sert à retrouver ta bibliothèque si tu perds ton appareil et à gérer tes appareils depuis n'importe quel navigateur. Comme la synchro, il sert le service que tu demandes.</p>
