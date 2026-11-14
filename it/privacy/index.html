@@ -45,7 +45,7 @@
   <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Privacy</h1>
-      <p class="date">Aggiornato il 14 novembre 2026.</p>
+      <p class="date">Aggiornato il 15 novembre 2026.</p>
       <p class="foi">Tradotto dalla <a href="/confidentialite/" hreflang="fr">versione francese</a>, che prevale in caso di differenze.</p>
       <p class="chapeau">Mirinu è un progetto personale di Marco, in Svizzera. È lui il responsabile dei dati descritti qui. Per qualsiasi domanda: <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>.</p>
     </div>
@@ -60,7 +60,7 @@
 
       <section aria-labelledby="sortie">
         <h2 id="sortie">Cosa esce dal tuo dispositivo</h2>
-        <p>Per mostrare una scheda o riconoscere i titoli di un'importazione, l'app invia il titolo o il numero cercato a TMDB e MangaUpdates, direttamente o tramite il relay di Mirinu. Le immagini arrivano dai loro server (per alcune locandine di serie, da quelli di TVmaze), le miniature dei trailer da quelli di Google. Sul sito, un testo in una scrittura che i caratteri di Mirinu non includono (il giapponese, per esempio) scarica un carattere di riserva dai server di Google. Questi servizi vedono il tuo indirizzo IP, come qualsiasi sito, e seguono le proprie regole.</p>
+        <p>Per mostrare una scheda o riconoscere i titoli di un'importazione, l'app invia il titolo o il numero cercato a TMDB e MangaUpdates, direttamente o tramite il relay di Mirinu. Le locandine di film e serie passano dal relay di Mirinu, che ne conserva una copia perché l'app si apra più in fretta: per queste locandine, TMDB non vede il tuo indirizzo IP. Se il relay non le fornisce, l'app le chiede a TMDB. Le altre immagini arrivano dai loro server (per alcune locandine di serie, da quelli di TVmaze), le miniature dei trailer da quelli di Google. Sul sito, un testo in una scrittura che i caratteri di Mirinu non includono (il giapponese, per esempio) scarica un carattere di riserva dai server di Google. Questi servizi vedono il tuo indirizzo IP, come qualsiasi sito, e seguono le proprie regole.</p>
         <p>Per un fumetto, l'app invia il titolo cercato o l'ISBN letto dal codice a barre al relay di Mirinu, che interroga la Bibliothèque nationale de France e Wikidata. La fotocamera serve solo a leggere un codice a barre o il codice QR di un altro dispositivo: l'immagine viene letta sul dispositivo e non viene inviata da nessuna parte.</p>
         <p>Per un romanzo, l'app invia il titolo o l'autore cercato al relay di Mirinu, che interroga Wikidata e la Bibliothèque nationale de France.</p>
         <p>Per un manga, l'app invia il numero della serie al relay di Mirinu, che interroga MangaUpdates, la Bibliothèque nationale de France e Wikidata per trovare i suoi editori ufficiali. Quando apri un link della sezione «Dove leggere», è il tuo browser che va sul sito dell'editore o della piattaforma: vede il tuo indirizzo IP e segue le proprie regole.</p>
@@ -110,7 +110,7 @@
       <section aria-labelledby="bases">
         <h2 id="bases">Basi giuridiche e durate</h2>
         <p>Mirinu segue la legge svizzera sulla protezione dei dati e, per le persone nell'UE, il GDPR. La sincronizzazione e la visualizzazione delle schede servono al servizio che chiedi (art. 6, par. 1, lett. b GDPR). Le corrispondenze e l'hosting si basano sul legittimo interesse a far funzionare il servizio (lett. f). Il controllo anti-bot e il conteggio per indirizzo si basano sullo stesso legittimo interesse: proteggere il servizio dagli abusi.</p>
-        <p>Mirinu non conserva il tuo indirizzo IP: per frenare gli abusi, il relay conta le richieste per indirizzo, in una forma illeggibile cancellata il giorno dopo. Cancella una sincronizzazione senza account 180&nbsp;giorni dopo la sua ultima sincronizzazione, e uno spazio rimasto vuoto dopo un giorno. I backup notturni del relay conservano ciò che viene cancellato per un massimo di altri 7&nbsp;giorni. Un'e-mail che invii viene conservata il tempo di trattare la tua richiesta.</p>
+        <p>Mirinu non conserva il tuo indirizzo IP: per frenare gli abusi, il relay conta le richieste per indirizzo, in una forma illeggibile cancellata il giorno dopo. Cancella una sincronizzazione senza account 180&nbsp;giorni dopo la sua ultima sincronizzazione, e uno spazio rimasto vuoto dopo un giorno. I backup notturni del relay conservano ciò che viene cancellato per un massimo di altri 7&nbsp;giorni. Un'e-mail che invii viene conservata il tempo di trattare la tua richiesta. Le copie delle locandine di TMDB vengono cancellate al più tardi 6&nbsp;mesi dopo la copia; non contengono nulla su di te, e il relay non conserva chi le ha richieste.</p>
       </section>
 
       <section aria-labelledby="droits">

@@ -45,7 +45,7 @@
   <main id="contenu" data-comptes>
     <div class="entete">
       <h1>Privacy</h1>
-      <p class="date">Updated on November 14, 2026.</p>
+      <p class="date">Updated on November 15, 2026.</p>
       <p class="foi">Translated from the <a href="/confidentialite/" hreflang="fr">French version</a>, which prevails if the two differ.</p>
       <p class="chapeau">Mirinu is a personal project by Marco, in Switzerland. He is responsible for the data described here. For any question: <a href="mailto:contact@mirinu.ch">contact@mirinu.ch</a>.</p>
     </div>
@@ -60,7 +60,7 @@
 
       <section aria-labelledby="sortie">
         <h2 id="sortie">What leaves your device</h2>
-        <p>To show a title page or recognize the titles of an import, the app sends the title or number searched for to TMDB and MangaUpdates, directly or through the Mirinu relay. Images come from their servers (for some show posters, from TVmaze's), trailer thumbnails from Google's. On the website, text in a script that Mirinu's fonts don't include (Japanese, for example) downloads a fallback font from Google's servers. These services see your IP address, like any website, and follow their own rules.</p>
+        <p>To show a title page or recognize the titles of an import, the app sends the title or number searched for to TMDB and MangaUpdates, directly or through the Mirinu relay. Posters of movies and shows go through the Mirinu relay, which keeps a copy so the app opens faster: for these posters, TMDB does not see your IP address. If the relay does not provide them, the app asks TMDB. Other images come from their servers (for some show posters, from TVmaze's), trailer thumbnails from Google's. On the website, text in a script that Mirinu's fonts don't include (Japanese, for example) downloads a fallback font from Google's servers. These services see your IP address, like any website, and follow their own rules.</p>
         <p>For a comic, the app sends the title you search for or the ISBN read from the barcode to the Mirinu relay, which queries the Bibliothèque nationale de France and Wikidata. The camera is only used to read a barcode or another device's QR code: the image is read on the device and sent nowhere.</p>
         <p>For a novel, the app sends the title or author you search for to the Mirinu relay, which queries Wikidata and the Bibliothèque nationale de France.</p>
         <p>For a manga, the app sends the series number to the Mirinu relay, which queries MangaUpdates, the Bibliothèque nationale de France and Wikidata to find its official publishers. When you open a link in the “Where to read” section, your browser goes to the publisher's or platform's site: it sees your IP address and follows its own rules.</p>
@@ -110,7 +110,7 @@
       <section aria-labelledby="bases">
         <h2 id="bases">Legal bases and retention</h2>
         <p>Mirinu follows the Swiss data protection act and, for people in the EU, the GDPR. Sync and showing title pages serve the service you ask for (Art. 6(1)(b) GDPR). Matching and hosting rest on the legitimate interest in running the service (Art. 6(1)(f)). The anti-bot check and the per-address count rest on the same legitimate interest: protecting the service against abuse.</p>
-        <p>Mirinu does not keep your IP address: to curb abuse, the relay counts requests per address, in an unreadable form erased the next day. It erases a sync without an account 180&nbsp;days after its last sync, and a space left empty after one day. The relay's nightly backups keep what is erased for up to 7 more days. An email you send is kept while your request is handled.</p>
+        <p>Mirinu does not keep your IP address: to curb abuse, the relay counts requests per address, in an unreadable form erased the next day. It erases a sync without an account 180&nbsp;days after its last sync, and a space left empty after one day. The relay's nightly backups keep what is erased for up to 7 more days. An email you send is kept while your request is handled. Copies of TMDB posters are erased at most 6&nbsp;months after they were copied; they contain nothing about you, and the relay does not keep who asked for them.</p>
       </section>
 
       <section aria-labelledby="droits">
